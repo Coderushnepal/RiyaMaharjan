@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.header-section {
+  border: solid 1px black;
+  text-align: center;
+  margin: 30px;
+  padding: 10px;
+  font-weight: bold;
+}
+.side-section {
+  border: solid 1px black;
+  float: left;
+  width: 25%;
+  height: 200px;
+  margin-left: 30px;
+  padding: 4px;
+}
+.main-section {
+  border: solid 1px black;
+  float: right;
+  padding: 4px;
+  width: 68%;
+  margin-right: 30px;
+  height: 200px;
+}
+.footer-section {
+  border: solid 1px black;
+  text-align: center;
+  margin: 30px;
+  padding: 10px;
+}
+.clear {
+  clear: both;
+}

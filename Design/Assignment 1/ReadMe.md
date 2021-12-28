@@ -1,0 +1,3 @@
+Newspaper Assignment
+
+Non Resposive
