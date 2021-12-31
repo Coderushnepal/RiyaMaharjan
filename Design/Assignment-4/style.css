@@ -1,0 +1,398 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Lora:wght@400;700&family=Playfair+Display&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+li {
+  text-decoration: none;
+  list-style: none;
+}
+header {
+  max-width: 375px;
+  margin-bottom: 19px;
+  /* color: pink; */
+}
+.clear {
+  clear: both;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+
+body {
+  font-family: Lato;
+  margin: 0px auto;
+}
+.hamburger {
+  width: 34px;
+  height: 34px;
+  /* margin: 26px 67px 46px 25px; */
+  position: absolute;
+  top: 18px;
+  left: 20px;
+}
+.topic {
+  width: 133px;
+  font-family: Playfair Display;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 43px;
+  margin: 14px auto;
+  color: #000000;
+  margin-bottom: 19px;
+}
+a {
+  text-decoration: none;
+  list-style: none;
+}
+.main {
+  max-width: 375px;
+}
+.main-img img {
+  width: 100%;
+}
+.intro {
+  width: 334px;
+  margin: 30px 20px 20px;
+}
+.title {
+  font-family: Playfair Display;
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 36px;
+  text-transform: capitalize;
+  color: #334756;
+  margin-bottom: 20px;
+  color: #2c394b;
+}
+.sec-color {
+  color: #ff4c29;
+}
+.sec-background {
+  background-color: #ff4c29;
+}
+.subtitle {
+  font-family: Lato;
+  font-size: 16px;
+  line-height: 160%;
+  color: #667580;
+}
+.btn {
+  width: 89.3333333333%;
+  margin: 20px auto 0px;
+  /* justify-content: center; */
+  /* align-items: center; */
+  padding: 13px 0px;
+  font-family: Lato;
+  font-size: 16px;
+  line-height: 140%;
+  color: #2c394b;
+  background-color: #ffffff;
+  border: 1px solid #667580;
+  transition-duration: 0.4s;
+}
+.btn:hover {
+  background-color: #ff4c29;
+  color: white;
+}
+.services {
+  background: #f6f6f6;
+  padding: 32px 20px 25px;
+}
+.about p {
+  margin-bottom: 20px;
+}
+
+.cards {
+  background-color: #2c394b;
+  width: 100%;
+  margin: 0px auto 24px;
+}
+.workimage img {
+  width: 100%;
+}
+.more p {
+  color: #ffffff;
+  margin: 0px;
+}
+.more {
+  padding: 23px 30px;
+}
+.more p,
+.more div {
+  display: inline-block;
+}
+
+.usericon {
+  margin-right: 10px;
+}
+.hype::after {
+  content: url(image/line.png);
+  margin-left: 50px;
+}
+.content {
+  font-size: 12px;
+  line-height: 110%;
+  text-align: center;
+  color: #c2c2c2;
+  width: 87.1641791045%;
+}
+.hype {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 20px 50px;
+}
+.top {
+  display: block;
+  margin-bottom: 30px;
+}
+/* .card-detail{
+  display: none;
+} */
+.card2 {
+  display: none;
+}
+
+.fa {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 120%;
+  /* margin:0px 20px 30px ; */
+  text-align: center;
+  margin-bottom: 16px;
+  width: 100%;
+  padding: 14px auto ;
+}
+.fa:hover{
+  background-color: #ff4c29;
+}
+.facility-list{
+  margin-top: 33px;
+}
+.facility-list li a {
+  color: #334756;
+
+  /* background-color: red; */
+}
+.facility-list li :hover {
+  
+  color: #ffffff;
+  font-weight: bold;
+}
+.facilities {
+  margin: 40px 20px;
+}
+.map {
+  width: 100%;
+  margin-bottom: 49px;
+}
+.location {
+  margin: 0px 0px 40px;
+  background-color: #f7f7f7;
+  padding: 40px 0px 49px;
+}
+.location-header {
+  margin: 40px 20px 8px;
+}
+.explore {
+  font-size: 20px;
+  line-height: 120%;
+  color: #086de0;
+  margin: 48px auto 0px 20px;
+}
+.explore::after {
+  content: url(image/blueline.png);
+  width: 90px;
+  margin-left: 30px;
+}
+.customer-card {
+  background-color: #334756;
+  width: 88.6243386243%;
+  color: #ffffff;
+  padding-bottom: 16px;
+  margin-bottom: 30px;
+}
+.quote-image {
+  height: 27px;
+  width: 11.9402985075%;
+  position: relative;
+  display: inline-block;
+  top: 27px;
+  left: 24px;
+}
+.quote-image img{
+  z-index: 1;
+}
+.quote {
+  width: 77.9104477612%;
+  margin: 0px 39px 98px 35px;
+  font-size: 16px;
+  line-height: 140%;
+  z-index: 2;
+}
+.author {
+  margin: 34px 0px 0px 39px;
+}
+.author-pic {
+  margin-right: 16px;
+}
+.author-name {
+  font-weight: bold;
+}
+.author-post {
+  font-weight: 300;
+  font-size: 12px;
+}
+.author div {
+  display: inline-block;
+}
+#card2,
+#card3 {
+  display: none;
+}
+.explored {
+  font-size: 20px;
+  line-height: 120%;
+  color: #086de0;
+}
+.explored::after {
+  content: url(image/blueline.png);
+  width: 90px;
+  margin-left: 30px;
+}
+.testimonial {
+  margin: 40px 20px;
+}
+.socialproof {
+  padding: 28px 16px 28px 24px;
+  background-color: #f6f6f6;
+}
+.slider {
+  margin-top: 36px;
+}
+.logo {
+  margin: 40px auto 28px ;
+}
+.logo div {
+  margin: 0px auto 32px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: block;
+}
+.microsoft {
+  margin: 0px 18px;
+}
+.grab {
+  margin: 0px 54px;
+}
+.zoom {
+  margin: 0px 37px;
+}
+.information {
+  margin: 40px 20px 68px 19px;
+}
+.trend-pic img {
+  width: 100%;
+}
+.trend-cards {
+  width: 100%;
+  margin-bottom: 20px;
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.1));
+}
+.trend-topic {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 120%;
+  color: #334756;
+}
+.trend-writer {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 140%;
+  color: #2c394b;
+}
+.trend-info {
+  padding: 22px 20px;
+}
+#trend-card2 {
+  display: none;
+}
+.phone {
+  font-size: 16px;
+  line-height: 140%;
+}
+.phone::before {
+  content: url(image/phone.png);
+  margin-right: 12px;
+  width: 20px;
+  height: 20px;
+}
+.footer {
+  margin-left: 20px;
+  /* padding: 40px auto 50px 20px ; */
+}
+.footer p {
+  font-size: 16px;
+  line-height: 140%;
+  color: #334756;
+}
+#comp-logo {
+  font-family: Playfair Display;
+  font-size: 48px;
+  line-height: 110%;
+  color: #000000;
+}
+footer{
+  background-color: #f7f7f7;
+}
+.footer-location {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #334756;
+}
+.footer-location::after {
+  content: url(image/dropdown.png);
+  margin-left: 16px;
+}
+.social-icons {
+  display: inline-block;
+}
+.fb {
+  margin-right: 30px;
+}
+.twitter {
+  margin-right: 32px;
+}
+.copyright {
+  padding-top: 20px;
+  border-top: 1px solid #334756;
+  width:90%;
+  font-size: 16px;
+line-height: 140%;
+color: #667580;
+
+}
+.footer p {
+  margin-bottom: 20px;
+}
+.footer-location {
+  margin-top: 34px;
+}
+.social-icons {
+  margin-bottom: 45px;
+}
+.footer span{
+  font-weight: bold;
+}
+
+/* For tablet */
+@media only screen and (min-width:375) {
+  
+}
