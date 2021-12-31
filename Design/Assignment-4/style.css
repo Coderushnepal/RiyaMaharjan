@@ -26,6 +26,7 @@ header {
 body {
   font-family: Lato;
   margin: 0px auto;
+  max-width: 375px;
 }
 .hamburger {
   width: 34px;
@@ -49,9 +50,7 @@ a {
   text-decoration: none;
   list-style: none;
 }
-.main {
-  max-width: 375px;
-}
+
 .main-img img {
   width: 100%;
 }
@@ -157,32 +156,30 @@ a {
 .card2 {
   display: none;
 }
-
-.fa {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 120%;
-  /* margin:0px 20px 30px ; */
-  text-align: center;
-  margin-bottom: 16px;
+.map img{
   width: 100%;
-  padding: 14px auto ;
 }
-.fa:hover{
-  background-color: #ff4c29;
+intro{
+  width: 100%;
 }
-.facility-list{
+.lists{
+  width: 100%;
   margin-top: 33px;
 }
-.facility-list li a {
-  color: #334756;
-
-  /* background-color: red; */
+.fa{
+  font-size: 24px;
+line-height: 120%;
+text-align: center;
+color: #334756;
+font-weight: bold;
+padding: 14px 20px;
+display: inline-block;
+width: 100%;
+margin-bottom: 20px;
 }
-.facility-list li :hover {
-  
+.fa:hover{
+  background-color:  #ff4c29;
   color: #ffffff;
-  font-weight: bold;
 }
 .facilities {
   margin: 40px 20px;
@@ -197,7 +194,7 @@ a {
   padding: 40px 0px 49px;
 }
 .location-header {
-  margin: 40px 20px 8px;
+  margin: 0px 20px 8px;
 }
 .explore {
   font-size: 20px;
@@ -287,12 +284,22 @@ a {
 }
 .microsoft {
   margin: 0px 18px;
+  width:171px;
+  height:40px;
+}
+.meet{
+  width:205px;
+  height:40px;
 }
 .grab {
   margin: 0px 54px;
+  width:99px;
+              height:40px;
 }
 .zoom {
   margin: 0px 37px;
+  width:"133px";
+   height:"30px";
 }
 .information {
   margin: 40px 20px 68px 19px;
@@ -304,6 +311,10 @@ a {
   width: 100%;
   margin-bottom: 20px;
   filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.1));
+}
+#trend-card1 div div img{
+  width:360px;
+  height:240px;
 }
 .trend-topic {
   font-weight: bold;
@@ -391,8 +402,310 @@ color: #667580;
 .footer span{
   font-weight: bold;
 }
+.facility{
+  display: none;
+}
+.break{
+  display: block;
+}
+.lang{
+  display: none;
+}
 
 /* For tablet */
-@media only screen and (min-width:375) {
+@media only screen and (min-width:600px) {
+  body{
+    max-width: 834px;
+    margin: 0px auto;
+  }
+  header{
+    margin: 0px auto 57px;
+  }
+  .hamburger{
+    left: 32px;
+  }
+  .introduction{
+width: 100%;
+margin-right: 0px;
+  }
+  .introduction div{
+    display: inline-block;
+    /* height: 293px; */
+  }
+  .clearfix{
+    overflow: auto;
+    clear: both;
+  }
+  .main-img{
+    float: left;
+    width: 47.9274611399%;
+  }
+  .intro{
+    float: right;
+    width: 47.5388601036%;
+   margin: 0px;
+  }
+  .button-container{
+    width: 100%;
+  }
+  .button-container button{
+    display: inline-block;
+  }
+  .btn:hover{
+    background-color:#FF4C29 ;
+    color: #ffffff;
+    width: 52.1621621622%;
+
+  }
+  .btn1{
+    float: left;
+    width: 42.4324324324%;
+  }
+  .btn2{
+    float: right;
+    width: 42.4324324324%;
+  }
+  .parentard{
+    width: 100%;
+  }
+  .cards{
+    display: inline-block;
+    width: 31.6062176166%;
+
+  }
+  .card2{
+    margin: auto 2% auto 2%;
+  }
+  .card-detail{
+    display: none;
+  }
+  .content{
+    width:88.1147540984% ;
+    padding: 0px;
+    font-size: 12px;
+    line-height: 110%;
+  }
+  .normal{
+    font-size: 16px;
+  }
+  .facilitiy-container div{
+    display: inline-block;
+  }
+  .facilitiy-container{
+    margin-top: 20px;
+  }
+  .fa{
+    font-weight: bold;
+font-size: 20px;
+line-height: 120%;
+  }
+  .lists{
+    float: left;
+    width: 31.9948186528%;
+    margin-top: 0px;
+  }
   
+  .facility{
+    float: right;
+    display: block;
+    /* margin-left: 15.357513%; */
+    width: 51.9909326425%;
+    /* margin-top: 20px; */
+  }
+  .subtitle{
+    margin-bottom: 20px;
+  }
+ 
+  .location{
+    width: 100%;
+    display: block;
+  }
+  .location-header{
+    float: right;
+    width: 42.9158031088%;
+  }
+  .map{
+    float: left;
+    width: 51.0362694301%;
+  }
+  .explore{
+    margin-top: 22px;
+    margin-left: 28px;
+  }
+  .customer-card{
+width: 49%;
+display: inline-block;
+  }
+  #card2{
+    display: inline-block;
+    margin-left: 10px;
+  }
+  #card2 .quote{
+margin-bottom:76px ;
+  }
+  .hidden{
+    display: none;
+  }
+  .break{
+    display: inline-block;
+  }
+  .centered{
+    text-align: center;
+  }
+  .inc{
+    line-height: 110%;
+    text-align: center;
+    width: 75.6476683938%;
+    margin: 20px auto 60px auto;
+    
+  }
+  .socialproof{
+    background-color: none;
+  }
+  .logo{
+    width: 96.7616580311%;
+  }
+  .logo div{
+    display: inline-block;
+    margin-right: 25px;
+    padding: 0px;
+
+  }
+  .logo div:last-child{
+margin-right: 17px;
+  }
+  .zoom{
+    width: 127px;
+height: 29px;
+margin-right: 66px;
+  }
+  .grab{
+    width: 95px;
+height: 38px;
+margin-right: 53px;
+  }
+.meet{
+  width: 196px;
+height: 38px;
+margin-right: 29px;
+}
+.major{
+  font-weight: bold;
+font-size: 40px;
+line-height: 53px;
+}
+.trend_cards-block{
+  width: 100%;
+  /* background-color: rosybrown; */
+}
+.trend-cards{
+  display: inline-block;
+  width: 31.6062176166%;
+  margin-right: 10px;
+  /* background-color: skyblue; */
+  margin-bottom: 0px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+.trend-cards:last-child{
+  margin-right: 0px;
+}
+#trend-card2{
+  display: inline-block;
+  position: relative;
+  top: 30px;
+  
+}
+.trend-topic{
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 120%;
+  color: #334756;
+}
+.trend-writer{
+  font-weight: 300;
+font-size: 10px;
+line-height: 140%;
+color: #2C394B;
+}
+#insight4{
+  display: none;
+}
+.trend-titled{
+  font-weight: bold;
+font-size: 18px;
+line-height: 120%;
+color: #334756;
+width: 81.9672131148%;
+margin-bottom: 12px;
+}
+.trend-subtitle{
+  font-size: 12px;
+line-height: 160%;
+color: #667580;
+margin-bottom: 12px;
+width: 84.4262295082%;
+}
+.trend-base-writer{
+  font-weight: 300;
+font-size: 10px;
+color: #334756;
+margin-bottom: 12px;
+
+line-height: 140%;
+}
+.view{
+  font-weight: bold;
+font-size: 14px;
+line-height: 140%;
+color: #086DE0;
+margin-top:10px ;
+}
+#trend-card2{
+  /* background-color: skyblue; */
+  padding:20px 20px 10px 20px ;
+  
+}
+.lang{
+  display: block;
+  text-align: right;
+  float: right;
+  position: relative;
+  top: -220px;
+  margin-left:32px ;
+  left: -48px;
+}
+.lang p{
+  font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+color: #334756;
+}
+#us{
+font-weight: bold;
+font-size: 20px;
+line-height: 120%;
+color: #086DE0;
+
+}
+#us::after{
+  content: url(image/blue-down-arrow.png);
+  margin-left: 16px;
+
+}
+.footer-location{
+  margin-top: 54px;
+}
+.social-icons{
+  float: right;
+  position: relative;
+  top: -100px;
+  right: -137px;
+}
+.copyright{
+  text-align: center;
+  display: block;
+  margin: 0px auto;
+  width: 96%;
+  padding-bottom: 10px;
+}
 }

@@ -17,24 +17,27 @@
       </div>
     </header>
     <div class="main">
-      <div class="main-img">
-        <img src="image/main-image.png" alt="Workspace" />
-      </div>
-      <div class="intro">
-        <p class="title">
-          A revolutionary <br />
-          <span class="sec-color">co-working space</span> to find the best
-          innovations
-        </p>
-        <p class="subtitle">
-          In frispes, we spearhead new initiatives and provide mentorship to a
-          new startup, and help grow their opportunities in key local, regional
-          and global markets
-        </p>
-        <div class="button-container">
-          <button class="btn">Find Your place</button>
-          <button class="btn">Contact</button>
+      <div class="introduction clearfix">
+
+        <div class="main-img">
+          <img src="image/main-image.png" alt="Workspace" />
         </div>
+        <div class="intro">
+          <p class="title">
+            A revolutionary <br />
+            <span class="sec-color">co-working space</span> to find the best
+            innovations
+          </p>
+          <p class="subtitle">
+            In frispes, we spearhead new initiatives and provide mentorship to a
+            new startup, and help grow their opportunities in key local, regional
+            and global markets
+          </p>
+          <div class="button-container">
+            <button class="btn btn1">Find Your place</button>
+            <button class="btn btn2">Contact</button>
+          </div>
+      </div>
       </div>
       <div class="services">
         <div class="about">
@@ -135,19 +138,38 @@
           All facilities are designed to meet all your
           <span class="sec-color">needs </span>
         </p>
-        <p class="subtitle">
+        <p class="subtitle sub1">
           During the COVID-19 pandemic, for your convenience we are improving
           our facilities at some stage so as not to hamper your productivity
         </p>
-        <ul class="facility-list">
+        <!-- <ul class="facility-list">
           <li class="fa"><a href="#"> Cozy Cafe</a></li>
           <li class="fa"><a href="#">Outdoor Space</a></li>
           <li class="fa"><a href="#">Healthier Workplace</a></li>
           <li class="fa"><a href="#">Spacious Parking Area</a></li>
-        </ul>
+        </ul> -->
+        <div class="facility-container clear">
+
+          <div class="lists">
+            <ul>
+              <li class="fa">Cozy Cafe</li>
+              <li class="fa">Outdoor Space</li>
+              <li class="fa">Healthier Workplace</li>
+              <li class="fa">Spacious Parking Area</li>
+            </ul>
+          </div>
+          <div class="facility">
+            <img
+              src="image/factimg.png"
+              alt="facility"
+             
+            />
+          </div>
+        </div>
       </div>
-      <div class="location">
-        <div class="location-header">
+      </div>
+      <div class="location clear">
+        <div class="location-header ">
           <p class="title">
             Workspace <span class="sec-color">where</span> and how you need it
           </p>
@@ -156,16 +178,17 @@
             productivity and help your dreams come true
           </p>
         </div>
-        <div class="map">
+        <div class="map ">
           <img src="image/map.png" alt="Map" />
         </div>
         <span class="explore">Explore location</span>
       </div>
+
       <div class="testimonial">
         <p class="title">
-          What <br /><span class="sec-color">Customers</span> Say
+          What <span class="sec-color">Customers</span> Say
         </p>
-        <div class="slider">
+        <div class="slider clear">
           <div class="customer-card" id="card1">
             <div class="quote-image">
               <img src="image/quote.png" alt="quote" />
@@ -251,15 +274,15 @@
               </div>
             </div>
           </div>
-          <span class="explored"> Swipe </span>
+         <p class="hidden"> <span class="explored"> Swipe </span></p> 
         </div>
       </div>
       <div class="socialproof">
-        <p class="title">
-          Trusted by the world’s <br />
-          <span class="sec-color"> top companies </span>
+        <p class="title centered">
+          Trusted by the world’s
+          <span class="sec-color break"> top companies </span>
         </p>
-        <p class="subtitle">
+        <p class="subtitle inc">
           From entrepreneurs to Fortune 500s, we’re listening and learning from
           our global community of businesses as they adapt and reinvent.
         </p>
@@ -268,50 +291,44 @@
             <img
               src="image/zoom.png"
               alt="zoom logo"
-              width="133px"
-              height="30px"
             />
           </div>
           <div class="grab">
             <img
               src="image/grab.png"
               alt="grab logo"
-              width="99px"
-              height="40px"
+              
             />
           </div>
           <div class="meet">
             <img
               src="image/meet.png"
               alt="meet logo"
-              width="205px"
-              height="40px"
+             
             />
           </div>
           <div class="microsoft">
             <img
               src="image/ms.png"
               alt="microsoft logo"
-              width="171px"
-              height="40px"
+             
             />
           </div>
         </div>
       </div>
       <div class="information">
-        <p class="title">
+        <p class="title major">
           <span class="sec-color">Trends</span> And
           <span class="sec-color">Insights</span> At Work
         </p>
         <div class="trend_cards-block">
           <!-- trend cards 1 -->
-          <div class="trend-cards">
+          <div class="trend-cards" id="trend-card1">
             <div class="trend-pic">
               <img
                 src="image/t1.png"
                 alt="Trend pic"
-                width="360px"
-                height="240px"
+               
               />
             </div>
             <div class="trend-info">
@@ -351,7 +368,7 @@
             </div>
           </div>
           <!-- trend cards 3 -->
-          <div class="trend-cards">
+          <div class="trend-cards" id="trend-card3">
             <div class="trend-pic">
               <img src="image/t2.png" alt="Trend pic" />
             </div>
@@ -363,7 +380,7 @@
             </div>
           </div>
           <!-- trend cards 4 -->
-          <div class="trend-cards">
+          <div class="trend-cards" id="insight4">
             <div class="trend-pic">
               <img src="image/t3.png" alt="Trend pic" />
             </div>
@@ -385,6 +402,11 @@
           <p>Jalan Bahagia Jembrana, Bali</p>
 
           <p class="footer-location">Our Location</p>
+
+        <div class="lang">
+          <p>Language</p>
+          <p id="us">United Stated</p>
+        </div>
 
           <div class="social-icons">
             <img
@@ -409,7 +431,7 @@
               class="insta"
             />
           </div>
-          <p class="copyright">Landing Page - Lemburs Created By <span>Mickwaz</span></p>
+          <p class="copyright">Landing Page - Lemburs Created By <span>Mickwaz</span> </p>
         </div>
       </footer>
     </div>
