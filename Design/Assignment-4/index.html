@@ -8,14 +8,31 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="top-section">
+    <header class="top-section clear ">
       <a href="#">
         <img src="image/hamburger.png" alt="hamburger icon" class="hamburger" />
       </a>
       <div class="topic">
         <a href="#"><span class="topic">Lemburs</span></a>
       </div>
+      <nav class="navbar clear">
+        <ul>
+          <li><a class="active" href="#">Home</a></li>
+          <li  class="dropdown"><a href="#">Services</a></li>
+          
+          <li class="dropdown"><a href="#" >Workspace</a></li>
+          
+          <li><a href="#">Event</a></li>
+          <li><a href="#">Contact</a></li>
+          <div class="clear"></div>
+        </ul>
+        <div class="user clear">
+          <p>Log In</p>
+          <img src="image/user.png" width="27px" height="27px" alt="user" />
+        </div>
+      </nav>
     </header>
+    <div class="line " id="line1"></div>
     <div class="main">
       <div class="introduction clearfix">
 
@@ -39,14 +56,17 @@
           </div>
       </div>
       </div>
-      <div class="services">
-        <div class="about">
-          <p class="title">Browse by Workspace</p>
-          <p class="subtitle">
-            For companies of all sizes, WeWork provides global scale facilities
-            and flexibility to help your business adapt to uncertainty. Find the
-            right space for you.
-          </p>
+      <div class="services clear">
+        <div class="about clear">
+          <div class="services-header">
+
+            <p class="title">Browse by Workspace</p>
+            <p class="subtitle">
+              For companies of all sizes, WeWork provides global scale facilities
+              and flexibility to help your business adapt to uncertainty. Find the
+              right space for you.
+            </p>
+          </div>
           <div class="parentcard">
             <div class="cards">
               <div class="workimage">
@@ -133,7 +153,7 @@
           </div>
         </div>
       </div>
-      <div class="facilities">
+      <div class="facilities clear">
         <p class="title">
           All facilities are designed to meet all your
           <span class="sec-color">needs </span>
@@ -168,8 +188,9 @@
         </div>
       </div>
       </div>
-      <div class="location clear">
-        <div class="location-header ">
+      <div class="space"></div>
+      <div class="location clearfix">
+        <div class="location-header clear ">
           <p class="title">
             Workspace <span class="sec-color">where</span> and how you need it
           </p>
@@ -178,7 +199,7 @@
             productivity and help your dreams come true
           </p>
         </div>
-        <div class="map ">
+        <div class="map  ">
           <img src="image/map.png" alt="Map" />
         </div>
         <span class="explore">Explore location</span>
@@ -391,15 +412,101 @@
               <div class="trend-writer">Irvan Bukan Hakim</div>
             </div>
           </div>
+
+            <!-- trend cards 5 -->
+
+        <div class="trend-cards" id="trend-card5" >
+          <div class="trend-pic">
+            <img
+              src="image/t4.png"
+              alt="Trend pic"
+             
+            />
+          </div>
+          <div class="trend-info">
+
+            <div class="trend-topic">Register #MboisTalk</div>
+            <div class="trend-writer">Ariq Nak Qidul</div>
+          </div>
+        </div>
+
+        <!-- trend cards 6 -->
+
+        <div class="trend-cards" id="trend-card6">
+          <div class="trend-pic">
+            <img
+              src="image/t5.png"
+              alt="Trend pic"
+              
+            />
+          </div>
+          <div class="trend-info">
+
+            <div class="trend-topic">FREE Start Up Events from the experts!</div>
+            <div class="trend-writer">Thaifiqurrahman</div>
+          </div>
+        </div>
+     
         </div>
       </div>
       <!-- info ends -->
       <footer>
-        <div class="footer">
-          <p id="comp-logo">Lemburs</p>
-          <p class="phone">+62 (21) 3456 7891</p>
-          <p>PT. Lembur Tipes</p>
-          <p>Jalan Bahagia Jembrana, Bali</p>
+        <div class="footer clear" >
+          <div class="footer-column lembur-info clear">
+
+            <p id="comp-logo">Lemburs</p>
+            <p class="phone">+62 (21) 3456 7891</p>
+            <p>PT. Lembur Tipes</p>
+            <p>Jalan Bahagia Jembrana, Bali</p>
+          </div>
+
+          <div class="footer-column " id="company-info">
+
+            <div class="footer-col comp">
+              <p class="footer-title">Company</p>
+              <ul>
+                <li><a href="#">Mission</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Career</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Investors</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Newsroom</a></li>
+              </ul>
+            </div>
+  
+            <div class="footer-col partner" >
+              <p class="footer-title">Partnerships</p>
+              <ul>
+                <li><a href="#">Brokers</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Landlords</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Refer a Friend</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Event Planners</a></li>
+              </ul>
+            </div>
+  
+            <div class="footer-col help" >
+              <p class="footer-title">Support</p>
+              <ul>
+                <li><a href="#">Covid Response</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
 
           <p class="footer-location">Our Location</p>
 
@@ -431,7 +538,11 @@
               class="insta"
             />
           </div>
-          <p class="copyright">Landing Page - Lemburs Created By <span>Mickwaz</span> </p>
+          <div class="line" id="line2"></div>
+          <div class="lastline">
+
+            <p class="copyright">Landing Page - Lemburs Created By <span>Mickwaz</span> </p>
+          </div>
         </div>
       </footer>
     </div>
