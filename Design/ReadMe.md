@@ -1,4 +1,4 @@
-Static Website  :  https://coderushnepal.github.io/RiyaMaharjan/Design/Assignment-1/
+Newspaper Static Website  :  https://coderushnepal.github.io/RiyaMaharjan/Design/Assignment-1/
 
 Email Template  :  https://coderushnepal.github.io/RiyaMaharjan/Design/Assignment-2/
 
