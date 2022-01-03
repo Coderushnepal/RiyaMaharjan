@@ -57,8 +57,8 @@ function identicalFilter(arr) {
   let identical = [];
   let k = 0;
   for (i = 0; i < arr.length; i++) {
-    let repeatation = new Set(arr[i]);
-    if (repeatation.size === 1) {
+    let repeat = new Set(arr[i]);
+    if (repeat.size === 1) {
       identical[k++] = arr[i];
     }
   }
