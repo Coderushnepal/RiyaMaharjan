@@ -14,11 +14,10 @@ li a {
   color: #ffffff;
 }
 body {
-  /* max-width: 418px; */
   min-width: 424px;
   margin: 0px auto;
   text-align: center;
-  overflow-x: auto;
+  overflow-x: hidden !important;
   color: #252b42;
 }
 .right {
@@ -40,9 +39,7 @@ body {
   display: none;
 }
 .header {
-  /* padding-top: 20px; */
   background-image: url(./image/gradient.svg);
-  /* background: url("./image/header-background.png"); */
   width: 100%;
   height: 787px;
   background-repeat: no-repeat;
@@ -50,21 +47,8 @@ body {
   z-index: 1;
   padding-bottom: 80px;
   background-size: 100% 800px;
-
-  /* background: linear-gradient(39.97deg, #00F3B9 0.79%, #2187FF 79.29%); */
+  overflow: hidden;
 }
-/* .header-gradient{
-    padding: 0px 0px 0px 0px;
-    z-index: -1;
-    background: url("./image/header-background-gradient.png");
-
-    width: 100%;
-    height: 787px;
-    background-size: cover;
-   
-    background-repeat: no-repeat;
-    
-} */
 .header-top div {
   display: inline-block;
 }
@@ -84,7 +68,6 @@ body {
   align-items: center;
   padding: 18px 38px;
   background: #ffffff;
-  /* width: 27.990430622%; */
   border-radius: 35px;
   font-weight: 500;
   font-size: 16px;
@@ -141,6 +124,9 @@ body {
 }
 .computer img {
   width: 89.4230769231%;
+}
+.spacing {
+  height: 20px;
 }
 .features {
   color: #252b42;
@@ -296,7 +282,6 @@ body {
 .profile-pic img {
   width: 126px;
   height: 126px;
-
   margin: 33px auto;
 }
 .quote {
@@ -356,7 +341,6 @@ body {
   padding: 110px 0px 100px;
   display: inline-block;
 }
-
 .price-heading {
   font-weight: 900;
   font-size: 55px;
@@ -373,7 +357,6 @@ body {
   padding: 10px;
 }
 .price-detail {
-  /* margin-top: 102px; */
   padding-top: 10px;
   text-align: left;
   width: 57.6555023923%;
@@ -393,6 +376,9 @@ body {
   letter-spacing: 0.2px;
   display: inline-block;
   margin-bottom: 17px;
+}
+#newspaper-desktop {
+  display: none;
 }
 #price-time {
   font-weight: bold;
@@ -530,7 +516,6 @@ form textarea {
   height: 193px;
   border-radius: 0px;
 }
-
 #submit {
   width: 38.3597883598%;
   height: 52px;
@@ -585,11 +570,14 @@ footer {
 #footer-mail button {
   width: 84.4497607656%;
 }
-
 /* For Tablets */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   body {
+    min-width: 768px;
     overflow-x: hidden;
+  }
+  #newspaper-desktop {
+    display: none;
   }
   .logo {
     width: 12.9166666667%;
@@ -636,15 +624,14 @@ footer {
   .header {
     background-image: url(./image/bg-gradient.svg);
     width: 100%;
-    height: 1186px;
+    height: 1100px;
     background-repeat: no-repeat;
     position: relative;
     z-index: 1;
     padding-bottom: 80px;
     background-size: 100% 1100px;
-    overflow-x: hidden;
+    overflow: hidden;
   }
-
   .header-content {
     margin-top: 175px;
   }
@@ -656,7 +643,7 @@ footer {
   }
   .computer {
     width: 75.6944444444%;
-    margin-top: 189px;
+    margin-top: 180px;
   }
   .computer img {
     width: 100%;
@@ -672,9 +659,12 @@ footer {
     display: inline-block;
   }
   .newspaper-content {
-    /* width: %; */
     clear: left;
     overflow-x: hidden;
+  }
+  .buttons{
+    width: 50%;
+    margin: 0px auto;
   }
   .items {
     width: 30%;
@@ -760,12 +750,11 @@ footer {
     text-align: center;
   }
   .contact-detail div:nth-child(1) {
-    /* background-color: rosybrown; */
     width: 33%;
   }
   .contact-detail div:nth-child(2) {
     width: 19.861111%;
-   margin-left: 25px;
+    margin-left: 25px;
   }
   .contact-detail div:nth-child(3) {
     width: 25.5555555556%;
@@ -781,10 +770,8 @@ footer {
     overflow: hidden;
   }
   .footer-primary {
-    /* width:56.2741312741%; */
     width: 80%;
     margin: 0px auto;
-    /* float: left ; */
   }
   .content-each {
     display: inline-block;
@@ -799,8 +786,195 @@ footer {
     width: 31.9039451115%;
   }
   .footer-secondary {
-    /* width: 36.0038610039%; */
     width: 80%;
     margin: 0px auto;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  body {
+    min-width: 1425px;
+    overflow-x: hidden;
+  }
+  .header {
+    background-size: 100% 1433px;
+    height: 1433px;
+  }
+  .logo {
+    width: 186px;
+    height: 78px;
+    position: static;
+    margin-right: 22px;
+    position: relative;
+    top: 15px;
+    left: 0px;
+  }
+  .navbar {
+    display: inline-block;
+    width: 34.8760330579%;
+    margin-right: 54px;
+  }
+  #menu {
+    display: none;
+  }
+  .navbar ul li {
+    display: inline-block;
+    margin-right: 41px;
+  }
+  .navbar ul li:nth-child(5) {
+    margin-right: 0px;
+  }
+  #mail {
+    position: static;
+    width: 29%;
+  }
+  .header-top {
+    /* width: 84.0277777778%; */
+    width: 100%;
+    margin: 0px auto 100px;
+    padding: 60px 40px;
+  }
+  #mailaddress {
+    width: 64.0845070423%;
+    height: 54px;
+  }
+  #mail button {
+    width: 30%;
+    padding: 19px 0px;
+    font-weight: 500;
+    height: 54px;
+  }
+  .content-secondary {
+    font-weight: 900;
+    font-size: 55px;
+    line-height: 65px;
+  }
+  .content-detail {
+    width: 29.7916666667%;
+    margin: 0px auto 90px;
+  }
+  .content-button {
+    margin-bottom: 0px;
+  }
+  .header-content {
+    margin-bottom: 60px;
+  }
+  .computer {
+    margin-top: 0px;
+    padding: 55px 54px;
+  }
+  .features {
+    overflow-x: hidden;
+  }
+  .features .content-detail {
+    width: 24.694444%;
+    margin-bottom: 80px;
+  }
+  .feature-content {
+    width: 89.8611111111%;
+    overflow-x: auto;
+  }
+  .image-content {
+    width: 72.1792890263%;
+    float: left;
+  }
+  .about .content {
+    width: 41.0416666667%;
+  }
+  .about .content-secondary {
+    width: 100%;
+    font-size: 46px;
+    line-height: 57px;
+  }
+  .about .content-detail {
+    width: 50.4230118443%;
+  }
+  .buttons {
+    width: 59.5600676819%;
+    margin: 0px auto;
+    padding: 20px;
+  }
+  .items {
+    width: 19.7063369397%;
+    float: right;
+    margin: 142px 0px;
+  }
+  .price-content{
+    width: 60.8333333333%;
+  }
+  .sub-content,
+  .action {
+    display: none;
+  }
+  #newspaper-desktop {
+    display: block;
+    float: right;
+    width: 544px;
+    position: relative;
+    top: 40px;
+  }
+  .newspaper-content {
+    padding: 100px 0px;
+  }
+  .desktop-text-content {
+    width: 54.4117647059%;
+    text-align: left;
+    margin-bottom: 25px;
+  }
+  .content-sec {
+    font-size: 46px;
+    line-height: 57px;
+    letter-spacing: 0.2px;
+  }
+  .news-subscription {
+    text-align: left;
+    width: 83.6397058824%;
+  }
+  .content-info {
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.2px;
+  }
+  .mailing-address {
+    width: 95.6043956044%;
+  }
+  .mailing-address input,
+  .mailing-address button {
+    display: inline-block;
+  }
+  #email {
+    width: 60.758621%;
+    margin-right: 12px;
+  }
+  .mailing-address button {
+    width: 34.4827586207%;
+  }
+  #card4,
+  #card5,
+  #card6 {
+    display: inline-block;
+  }
+  .testimonial-card {
+    width: 78.125%;
+    margin: 0px auto;
+  }
+  .card {
+    width: 29.7777777778%;
+  }
+  .price-detail {
+    text-align: start;
+  }
+  .price-btn {
+    margin: 0px;
+  }
+  .footer-content {
+    clear: both;
+  }
+  .footer-primary {
+    width: 56.2741312741%;
+    float: left;
+  }
+  .footer-secondary {
+    width: 36.0038610039%;
+    float: right;
   }
 }
