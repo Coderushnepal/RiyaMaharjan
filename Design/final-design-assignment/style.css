@@ -6,6 +6,12 @@
 ul {
   list-style-type: none;
 }
+.computer{
+  z-index: 5;
+}
+.spacing{
+  z-index: 1;
+}
 li a {
   text-decoration: none;
   font-size: 15px;
@@ -44,7 +50,7 @@ body {
 .header {
   background-image: url(./image/gradient.svg);
   width: 100%;
-  height: 787px;
+  height: 100%;
   background-repeat: no-repeat;
   position: relative;
   z-index: 1;
@@ -574,9 +580,9 @@ footer {
   width: 84.4497607656%;
 }
 /* For Tablets */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 790px) {
   body {
-    min-width: 768px;
+    /* min-width: 768px; */
     overflow-x: hidden;
   }
   .header, .spacing, .features, .about,.subscription, .testimonial,.pricing,.contact,footer{
@@ -630,7 +636,7 @@ footer {
   .header {
     background-image: url(./image/bg-gradient.svg);
     width: 100%;
-    height: 1100px;
+    height: 100%;
     background-repeat: no-repeat;
     position: relative;
     z-index: 1;
@@ -676,6 +682,8 @@ footer {
     width: 30%;
     display: inline-block;
     margin-top: 0px;
+    position: relative;
+    top: -55px;
   }
   .item-individual {
     padding: 0px;
@@ -799,7 +807,7 @@ footer {
 /* For computers */
 @media only screen and (min-width: 1024px) {
   body {
-    min-width: 1425px;
+    /* min-width: 1425px; */
     /* max-width: 1400px; */
     overflow-x: hidden;
   }
@@ -808,7 +816,8 @@ footer {
   }
   .header {
     background-size: 100% 1433px;
-    height: 1433px;
+    /* height: 1433px; */
+    height: 100%;
   }
   .logo {
     width: 186px;
@@ -821,15 +830,15 @@ footer {
   }
   .navbar {
     display: inline-block;
-    width: 34.8760330579%;
-    margin-right: 54px;
+    width: 37.8760330579%;
+    margin-right: 24px;
   }
   #menu {
     display: none;
   }
   .navbar ul li {
     display: inline-block;
-    margin-right: 41px;
+    margin-right: 33px;
   }
   .navbar ul li:nth-child(5) {
     margin-right: 0px;
@@ -840,7 +849,7 @@ footer {
   }
   .header-top {
     /* width: 84.0277777778%; */
-    width: 90%;
+    width: 100%;
     margin: 0px auto 100px;
     padding: 60px 40px;
   }
@@ -908,7 +917,7 @@ footer {
     padding: 20px;
   }
   .items {
-    width: 19.7063369397%;
+    width: 22.706337%;
     float: right;
     margin: 142px 0px;
   }
@@ -990,5 +999,8 @@ footer {
   .footer-secondary {
     width: 36.0038610039%;
     float: right;
+  }
+  .socialmedia{
+    width: 49.69378%;
   }
 }
