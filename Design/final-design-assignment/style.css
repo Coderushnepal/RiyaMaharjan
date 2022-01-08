@@ -143,6 +143,9 @@ body {
 .text-content {
   padding: 81px 50px 0px;
 }
+.features .text-content{
+  padding: 0px;
+}
 .image-content img {
   width: 87.3205741627%;
   margin: 0px auto;
@@ -585,11 +588,15 @@ footer {
     /* min-width: 768px; */
     overflow-x: hidden;
   }
+
   .header, .spacing, .features, .about,.subscription, .testimonial,.pricing,.contact,footer{
     width: 100%;
   }
   #newspaper-desktop {
     display: none;
+  }
+  .features .text-content{
+    padding: 0px;
   }
   .logo {
     width: 12.9166666667%;
@@ -683,7 +690,7 @@ footer {
     display: inline-block;
     margin-top: 0px;
     position: relative;
-    top: -55px;
+    top: -5px;
   }
   .item-individual {
     padding: 0px;
@@ -818,6 +825,9 @@ footer {
     background-size: 100% 1433px;
     /* height: 1433px; */
     height: 100%;
+  }
+  .features .text-content{
+    padding: 0px;
   }
   .logo {
     width: 186px;
