@@ -18,7 +18,7 @@ body {
   min-width: 424px;
   margin: 0px auto;
   text-align: center;
-  overflow-x: hidden;
+  overflow-x: auto;
   color: #252b42;
 }
 .right {
@@ -50,6 +50,7 @@ body {
   z-index: 1;
   padding-bottom: 80px;
   background-size: 100% 800px;
+
   /* background: linear-gradient(39.97deg, #00F3B9 0.79%, #2187FF 79.29%); */
 }
 /* .header-gradient{
@@ -330,7 +331,7 @@ body {
   display: none;
 }
 .testimonial-btn {
-  width: 66.985645933%;
+  width: 280px;
   margin: 30px auto 0px;
   height: 65px;
 }
@@ -465,7 +466,7 @@ body {
 }
 .contact-detail div {
   width: 63.1578947368%;
-  margin: 0px auto;
+  margin: 0px auto 22px;
 }
 .contact-detail div p {
   width: 86.3636363636%;
@@ -583,4 +584,223 @@ footer {
 #footer-mail input,
 #footer-mail button {
   width: 84.4497607656%;
+}
+
+/* For Tablets */
+@media only screen and (min-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .logo {
+    width: 12.9166666667%;
+    position: absolute;
+    top: 52px;
+    left: 10%;
+  }
+  #login {
+    display: none;
+  }
+  #mail {
+    display: inline-block;
+    width: 62%;
+    top: 52px;
+    right: -2%;
+    position: absolute;
+  }
+  #mailaddress {
+    width: 30%;
+    background: #efefef;
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    border-radius: 39px;
+    height: 45px;
+  }
+  .sub-btn {
+    width: 20%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #2091f9;
+    padding: 10px;
+    height: 45px;
+  }
+  #mail input,
+  #mail button {
+    display: inline-block;
+  }
+  .menu {
+    position: absolute;
+    top: 58px;
+    right: 30px;
+  }
+  .header {
+    background-image: url(./image/bg-gradient.svg);
+    width: 100%;
+    height: 1186px;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 80px;
+    background-size: 100% 1100px;
+    overflow-x: hidden;
+  }
+
+  .header-content {
+    margin-top: 175px;
+  }
+  .content-secondary {
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 65px;
+    letter-spacing: 0.2px;
+  }
+  .computer {
+    width: 75.6944444444%;
+    margin-top: 189px;
+  }
+  .computer img {
+    width: 100%;
+  }
+  .feature-content {
+    width: 89.8611111111%;
+    clear: both;
+    margin: 0px auto;
+    overflow: hidden;
+  }
+  .image-content {
+    width: 65%;
+    display: inline-block;
+  }
+  .newspaper-content {
+    /* width: %; */
+    clear: left;
+    overflow-x: hidden;
+  }
+  .items {
+    width: 30%;
+    display: inline-block;
+    margin-top: 0px;
+  }
+  .item-individual {
+    padding: 0px;
+  }
+  .newspaper img {
+    width: 43.305556%;
+    float: left;
+    overflow-x: hidden;
+  }
+  .action {
+    display: inline-block;
+    width: 35.142118863%;
+  }
+  .testimonial {
+    margin-top: 160px;
+    overflow-x: hidden;
+  }
+  .card {
+    width: 30%;
+    height: 500px;
+    display: inline-block;
+    margin-left: 20px;
+  }
+  .testimonial-card {
+    width: 90.052632%;
+  }
+  .card:nth-child(4) {
+    margin-left: 0px;
+  }
+  .pricing-primary {
+    width: 48.223744%;
+    text-align: left;
+    float: left;
+  }
+  .price-content {
+    overflow: hidden;
+    clear: both;
+    width: 79.833333%;
+    margin: 0px auto;
+  }
+  .price-info {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+  }
+  .price-detail {
+    width: 36.511416%;
+    padding: 0px;
+    float: right;
+    margin: 0px;
+  }
+  .price-btn {
+    width: 65.9751037344%;
+  }
+  .price-btn button {
+    padding: 0px;
+  }
+  .contact-info {
+    display: block;
+    width: 38.694444%;
+  }
+  .contact-detail {
+    width: 70%;
+    margin: 0px auto 64px;
+  }
+  .contact-detail div {
+    display: inline-block;
+  }
+  .contact-detail div img,
+  .contact-detail div p {
+    display: block;
+  }
+  .contact-detail div img {
+    margin: 0px auto 10px;
+  }
+  .contact-detail div p {
+    width: 100%;
+    text-align: center;
+  }
+  .contact-detail div:nth-child(1) {
+    /* background-color: rosybrown; */
+    width: 33%;
+  }
+  .contact-detail div:nth-child(2) {
+    width: 19.861111%;
+   margin-left: 25px;
+  }
+  .contact-detail div:nth-child(3) {
+    width: 25.5555555556%;
+    margin-left: 25px;
+  }
+  .contact-form {
+    width: 60.2777777778%;
+  }
+  .footer-content {
+    width: 90%;
+    margin: 0px auto;
+    clear: both;
+    overflow: hidden;
+  }
+  .footer-primary {
+    /* width:56.2741312741%; */
+    width: 80%;
+    margin: 0px auto;
+    /* float: left ; */
+  }
+  .content-each {
+    display: inline-block;
+  }
+  #footer-content1 {
+    width: 29.3310463122%;
+  }
+  #footer-content2 {
+    width: 31.9039451115%;
+  }
+  #footer-content3 {
+    width: 31.9039451115%;
+  }
+  .footer-secondary {
+    /* width: 36.0038610039%; */
+    width: 80%;
+    margin: 0px auto;
+  }
 }
