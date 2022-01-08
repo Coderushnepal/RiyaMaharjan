@@ -20,6 +20,9 @@ body {
   overflow-x: hidden !important;
   color: #252b42;
 }
+.header, .spacing, .features, .about,.subscription, .testimonial,.pricing,.contact,footer{
+  width: 100%;
+}
 .right {
   float: right;
 }
@@ -576,6 +579,9 @@ footer {
     min-width: 768px;
     overflow-x: hidden;
   }
+  .header, .spacing, .features, .about,.subscription, .testimonial,.pricing,.contact,footer{
+    width: 100%;
+  }
   #newspaper-desktop {
     display: none;
   }
@@ -794,7 +800,11 @@ footer {
 @media only screen and (min-width: 1024px) {
   body {
     min-width: 1425px;
-    /* overflow-x: hidden; */
+    /* max-width: 1400px; */
+    overflow-x: hidden;
+  }
+  .header, .spacing, .features, .about,.subscription, .testimonial,.pricing,.contact,footer{
+    width: 100%;
   }
   .header {
     background-size: 100% 1433px;
@@ -830,7 +840,7 @@ footer {
   }
   .header-top {
     /* width: 84.0277777778%; */
-    width: 100%;
+    width: 90%;
     margin: 0px auto 100px;
     padding: 60px 40px;
   }
@@ -862,6 +872,9 @@ footer {
   .computer {
     margin-top: 0px;
     padding: 55px 54px;
+  }
+  #card6{
+    margin-right: 0px;
   }
   .features {
     overflow-x: hidden;
