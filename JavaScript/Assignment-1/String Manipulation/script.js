@@ -1,9 +1,9 @@
-console.log("----------Assignment 2----------");
+console.log("----------String Manipulation Assignment----------");
 
 // Question 1
 //Return Something to Me!
-function giveMeSomething (text){
-    return ("something "+ text);
+function giveMeSomething(text) {
+    return "something " + text;
 }
 
 //Answer 1
@@ -14,8 +14,8 @@ console.log(giveMeSomething("something"));
 
 //Question 2
 //Word without First Character
-function newWord(word){
-    return (word.substr(1));
+function newWord(word) {
+    return word.substr(1);
 }
 
 //Answer 2
