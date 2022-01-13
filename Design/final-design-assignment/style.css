@@ -78,9 +78,9 @@ body {
   margin-right: 35px;
   text-align: left;
 }
-.sub-btn {
+/* .sub-btn {
   width: 56.4593301435%;
-}
+} */
 .btn {
   align-items: center;
   padding: 18px 38px;
@@ -204,16 +204,16 @@ body {
   border: 1px solid #ffffff;
   box-sizing: border-box;
   border-radius: 35px;
-  width: 41.1483253589%;
-  height: 48px;
+  /* width: 41.1483253589%; */
+  padding: 16px 45px;
   margin-right: 16px;
 }
 .btn-buy:last-child {
   margin-right: 0px;
 }
 .btn-buy:hover {
-  width: 29.6650717703%;
-
+  /* width: 29.6650717703%; */
+  padding:18px 31px ;
   color: #2091f9;
   background-color: #ffffff;
   transition-duration: 0.5s;
@@ -258,8 +258,9 @@ body {
   border: none;
   color: #ffffff;
 }
+
 .mailing-address .mail-input {
-  padding: 19px 35px;
+  padding: 19px 39px;
   height: 54px;
   width: 100%;
   background: #f4f4f4;
@@ -267,6 +268,12 @@ body {
   box-sizing: border-box;
   border-radius: 39px;
   margin-bottom: 12px;
+}
+.mailing-address .mail-input::placeholder{
+  color: #18171D;
+  font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.1px;
 }
 .action h1 {
   margin-bottom: 10px;
@@ -357,7 +364,6 @@ body {
   letter-spacing: 0.1px;
   color: #ffffff;
   border: none;
-  width: 100%;
 }
 .pricing {
   background-color: #252b42;
@@ -424,7 +430,6 @@ body {
   margin: 0px auto;
 }
 .price-btn button {
-  /* height: 52px; */
   background: #2091f9;
   border-radius: 35px;
   padding: 18px 38px;
@@ -628,30 +633,30 @@ footer {
   .header-side .login {
     display: none;
   }
+  .header .header-top{
+    min-width: 952px;
+  }
   .header-top .mail {
     display: inline-block;
     width: 62%;
     top: 52px;
-    right: -2%;
+    right: 6%;
     position: absolute;
   }
   .mail .mailaddress {
-    width: 30%;
     background: #efefef;
     border: 1px solid #e8e8e8;
     box-sizing: border-box;
     border-radius: 39px;
-    height: 45px;
-    padding: 19px;
+    padding: 19px 39px;
   }
   .sub-btn {
-    width: 20%;
+    /* width: 20%; */
     font-weight: 500;
     font-size: 16px;
     line-height: 16px;
     color: #2091f9;
-    padding: 10px;
-    height: 45px;
+    padding: 19px 38px;
   }
   #mail input,
   #mail button {
@@ -901,7 +906,7 @@ footer {
     padding: 60px 0px;
   }
   .mail .mailaddress {
-    width: 64.0845070423%;
+    width:55.0845070423%;
     padding: 19px;
   }
   #mail button {
@@ -937,8 +942,8 @@ footer {
     min-width: 918px;
   }
   .sub-btn {
-    width: 30%;
     max-width: 141px;
+    padding: 19px 18px;
   }
   .features .content-detail {
     width: 24.694444%;
@@ -964,7 +969,7 @@ footer {
     width: 50.4230118443%;
   }
   .buttons {
-    width: 59.5600676819%;
+    width: 100%;
     margin: 0px auto;
     padding: 20px;
   }
