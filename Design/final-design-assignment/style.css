@@ -70,7 +70,7 @@ body {
   display: inline-block;
 }
 .header-top {
-  padding: 20px 16px 0px;
+  padding: 20px 0px 0px 16px;
 }
 .logo {
   width: 40%;
@@ -865,6 +865,7 @@ footer {
   .features .text-content {
     padding: 0px;
   }
+
   .logo {
     width: 186px;
     height: 78px;
