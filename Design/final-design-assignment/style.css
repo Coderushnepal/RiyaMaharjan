@@ -52,7 +52,7 @@ body {
 .navbar {
   display: none;
 }
-#mail {
+.header-top .mail {
   display: none;
 }
 .header {
@@ -160,6 +160,9 @@ body {
 }
 .headline {
   display: inline-block;
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: 0.1px;
 }
 .item-individual {
   padding: 0px 82px;
@@ -249,14 +252,13 @@ body {
 .mail-btn {
   width: 100%;
   align-items: center;
-  padding: 17px 35px;
+  padding: 17px 16px;
   background: #2091f9;
   border-radius: 35px;
-  height: 50px;
   border: none;
   color: #ffffff;
 }
-#email {
+.mailing-address .mail-input {
   padding: 19px 35px;
   height: 54px;
   width: 100%;
@@ -266,8 +268,11 @@ body {
   border-radius: 39px;
   margin-bottom: 12px;
 }
-.action h3 {
+.action h1 {
   margin-bottom: 10px;
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: 0.1px;
 }
 .mailing-address {
   margin-top: 34px;
@@ -331,9 +336,9 @@ body {
   letter-spacing: 0.0845349px;
   padding: 8px;
 }
-#card4,
-#card5,
-#card6 {
+.testimonial-card .card4,
+.testimonial-card .card5,
+.testimonial-card .card6 {
   display: none;
 }
 .testimonial-btn {
@@ -390,7 +395,7 @@ body {
   letter-spacing: 0.2px;
   margin-bottom: 17px;
 }
-#price-value {
+.price .price-value {
   font-weight: 900;
   font-size: 55px;
   line-height: 65px;
@@ -398,10 +403,10 @@ body {
   display: inline-block;
   margin-bottom: 17px;
 }
-#newspaper-desktop {
+.newspaper-content .newspaper-desktop {
   display: none;
 }
-#price-time {
+.price .price-time {
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
@@ -492,7 +497,7 @@ textarea {
   margin-bottom: 78px;
 }
 .contact-form {
-  height: 670px;
+  height: 720px;
   background: #ffffff;
   border: 1px solid #dddddd;
   box-sizing: border-box;
@@ -571,7 +576,7 @@ footer {
 .content-each {
   margin-bottom: 83px;
 }
-#footer-socialmedia {
+.footer-secondary .footer-socialmedia {
   margin-bottom: 33px;
 }
 .secondary-content_header {
@@ -586,8 +591,8 @@ footer {
   line-height: 27px;
   letter-spacing: 0.2px;
 }
-#footer-mail input,
-#footer-mail button {
+.footer-secondary .footer-mail input,
+.footer-secondary .footer-mail button {
   width: 84.4497607656%;
 }
 /* For Tablets */
@@ -608,7 +613,7 @@ footer {
   footer {
     width: 100%;
   }
-  #newspaper-desktop {
+  .newspaper-content .newspaper-desktop {
     display: none;
   }
   .features .text-content {
@@ -620,23 +625,24 @@ footer {
     top: 52px;
     left: 10%;
   }
-  #login {
+  .header-side .login {
     display: none;
   }
-  #mail {
+  .header-top .mail {
     display: inline-block;
     width: 62%;
     top: 52px;
     right: -2%;
     position: absolute;
   }
-  #mailaddress {
+  .mail .mailaddress {
     width: 30%;
     background: #efefef;
     border: 1px solid #e8e8e8;
     box-sizing: border-box;
     border-radius: 39px;
     height: 45px;
+    padding: 19px;
   }
   .sub-btn {
     width: 20%;
@@ -739,7 +745,7 @@ footer {
   .card:nth-child(4) {
     margin-left: 0px;
   }
-  #card1 {
+  .testimonial-card .card1 {
     margin-left: 0px;
   }
   .pricing-primary {
@@ -819,13 +825,13 @@ footer {
   .content-each {
     display: inline-block;
   }
-  #footer-content1 {
+  .footer-primary .footer-content1 {
     width: 29.3310463122%;
   }
-  #footer-content2 {
+  .footer-primary .footer-content2 {
     width: 31.9039451115%;
   }
-  #footer-content3 {
+  .footer-primary .footer-content3 {
     width: 31.9039451115%;
   }
   .footer-secondary {
@@ -873,7 +879,7 @@ footer {
     width: 37.8760330579%;
     margin-right: 24px;
   }
-  #menu {
+  .header-side .menu {
     display: none;
   }
   .navbar ul li {
@@ -883,7 +889,7 @@ footer {
   .navbar ul li:nth-child(5) {
     margin-right: 0px;
   }
-  #mail {
+  .header-top .mail {
     position: static;
     width: 29%;
   }
@@ -893,9 +899,9 @@ footer {
     margin: 0px auto 100px;
     padding: 60px 40px;
   }
-  #mailaddress {
+  .mail .mailaddress {
     width: 64.0845070423%;
-    padding: 19px 39px;
+    padding: 19px;
   }
   #mail button {
     width: 30%;
@@ -922,12 +928,16 @@ footer {
     margin-top: 0px;
     padding: 55px 54px;
   }
-  #card6 {
+  .testimonial-card .card6 {
     margin-right: 0px;
   }
   .features {
     overflow-x: hidden;
     min-width: 918px;
+  }
+  .sub-btn {
+    width: 30%;
+    max-width: 141px;
   }
   .features .content-detail {
     width: 24.694444%;
@@ -958,7 +968,7 @@ footer {
     padding: 20px;
   }
   .items {
-    width: 22.706337%;
+    width: 25.706337%;
     float: right;
     margin: 142px 0px;
   }
@@ -969,7 +979,7 @@ footer {
   .action {
     display: none;
   }
-  #newspaper-desktop {
+  .newspaper-content .newspaper-desktop {
     display: block;
     float: right;
     width: 544px;
@@ -1009,21 +1019,27 @@ footer {
   }
   .mailing-address {
     width: 95.6043956044%;
+    /* width: 60.758621%; */
+    margin-right: 12px;
   }
   .mailing-address input,
   .mailing-address button {
     display: inline-block;
   }
-  #email {
+  /* #email {
+    width: 60.758621%;
+    margin-right: 12px;
+  } */
+  .mailing-address .mail-input {
     width: 60.758621%;
     margin-right: 12px;
   }
   .mailing-address button {
     width: 34.4827586207%;
   }
-  #card4,
-  #card5,
-  #card6 {
+  .testimonial-card .card4,
+  .testimonial-card .card5,
+  .testimonial-card .card6 {
     display: inline-block;
   }
   .testimonial-card {
