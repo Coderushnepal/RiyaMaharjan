@@ -1,60 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-*{
-    margin: 0px;
-    padding: 0px;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
 }
-.center{
-    text-align: center;
+.center {
+  text-align: center;
 }
-body{
-    background-color: #f0f0f0;
+body {
+  background-color: #f0f0f0;
 }
-.passInput{
-    padding: 12px 12px;
-    width: 270px;
-    border-radius: 10px;
-    border: 2px solid #c7c6c1 ;
-    margin: 0px auto;
+.passInput {
+  padding: 12px 12px;
+  width: 270px;
+  border-radius: 10px;
+  border: 2px solid #c7c6c1;
+  margin: 0px auto;
 }
-i{
-    position: relative;
-    left: -40px;
+i {
+  position: relative;
+  left: -40px;
 }
-.content{
-    color: #1a77e8;
+.content {
+  color: #1a77e8;
 }
-h3, .passInput{
-margin-bottom: 10px;
+h3,
+.passInput {
+  margin-bottom: 10px;
 }
-div{
-    margin: 0px auto ;
+div {
+  margin: 0px auto;
 }
-.main{
-    width: 330px;
-    margin: 50px auto;
-    border: 1px solid #c7c6c1;
-    padding: 20px 10px 20px 30px;
-    font-family: 'Noto Sans', sans-serif;
- 
+.main {
+  width: 330px;
+  margin: 50px auto;
+  border: 1px solid #c7c6c1;
+  padding: 20px 10px 20px 30px;
+  font-family: "Noto Sans", sans-serif;
+  background-color: #ffffff;
 }
-.btn{
-    padding: 8px 12px;
-    background-color: #1a77e8;
-    border: none;
-    border-radius: 10px;
-    color: #ffffff;
-    display: inline-block;
+.btn {
+  padding: 8px 12px;
+  background-color: #1a77e8;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  display: inline-block;
 }
-.btn:hover{
-    box-shadow:2px  2px #c7c6c1 ;
-    transition: 0.2s;
+.btn:hover {
+  box-shadow: 2px 2px #c7c6c1;
+  transition: 0.2s;
 }
-.forgot{
-    display: inline-block;
-    margin-right: 144px;
-    font-size: 12px;
+.forgot {
+  display: inline-block;
+  margin-right: 144px;
+  font-size: 12px;
 }
-.forgot:hover{
-    cursor: pointer;
-    color: blue;
+.forgot:hover {
+  cursor: pointer;
+  color: blue;
 }
