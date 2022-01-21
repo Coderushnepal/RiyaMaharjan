@@ -10,19 +10,19 @@ All assignments have been listed below with its related topics
 
 - Assignment 3 - Float with Clearfix hack | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/Design/Assignment-3/Assignment%203(b)) | [Demo](https://coderushnepal.github.io/RiyaMaharjan/Design/Assignment-3/Assignment%203(b)/)
 
-- Assignment 4 - Static Lemburs | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/Design/Assignment-3/Assignment%203(a)">) | [Demo](https://coderushnepal.github.io/RiyaMaharjan/Design/Assignment-3/Assignment%203(a)/)
+- Assignment 4 - Static Lemburs | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/Design/Assignment-3/Assignment%203(a)) | [Demo](https://coderushnepal.github.io/RiyaMaharjan/Design/Assignment-3/Assignment%203(a)/)
 
-- Assignment 5 - Responsive Lemburs | [Code]("https://github.com/Coderushnepal/RiyaMaharjan/tree/main/Design/Assignment-4") | [Demo]("https://coderushnepal.github.io/RiyaMaharjan/Design/Assignment-4/")
+- Assignment 5 - Responsive Lemburs | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/Design/Assignment-4) | [Demo](https://coderushnepal.github.io/RiyaMaharjan/Design/Assignment-4/)
 
-- Final Design Assignment | [Code]("https://github.com/Coderushnepal/RiyaMaharjan/tree/main/Design/final-design-assignment") | [Demo]("https://coderushnepal.github.io/RiyaMaharjan/Design/final-design-assignment/")
+- Final Design Assignment | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/Design/final-design-assignment) | [Demo](https://coderushnepal.github.io/RiyaMaharjan/Design/final-design-assignment/)
 
 ## JavaScript Assignment
 
-- Assignment 1 - Ability Test | [Code]("https://github.com/Coderushnepal/RiyaMaharjan/tree/main/JavaScript/Assignment-1/Ability%20Test")
+- Assignment 1 - Ability Test | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/JavaScript/Assignment-1/Ability%20Test)
   
-- Assignment 2 - String Manipulation | [Code]("https://github.com/Coderushnepal/RiyaMaharjan/tree/main/JavaScript/Assignment-2") | [Demo]("https://coderushnepal.github.io/RiyaMaharjan/JavaScript/Assignment-1/String%20Manipulation/)
+- Assignment 2 - String Manipulation | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/JavaScript/Assignment-2) | [Demo](https://coderushnepal.github.io/RiyaMaharjan/JavaScript/Assignment-1/String%20Manipulation/)
   
-- Assignment 3 - Array | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/JavaScript/Assignment-1/Array) | [Demo](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/JavaScript/Assignment-1/Array)
+- Assignment 3 - Array | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/JavaScript/Assignment-1/Array) | [Demo](https://coderushnepal.github.io/RiyaMaharjan/JavaScript/Assignment-1/Array/)
   
 - Assignment 4 - Basics of JavaScript 1 | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/JavaScript/Assignment-1/Basic%20JavaScript) | [Demo](https://coderushnepal.github.io/RiyaMaharjan/JavaScript/Assignment-1/Basic%20JavaScript/)
   
