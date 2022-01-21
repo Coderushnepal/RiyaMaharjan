@@ -98,3 +98,20 @@ a {
 .btn-demo:hover {
   background-color: #285688;
 }
+@media only screen and (max-width: 938px){
+    .index-container{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 766px){
+.index-container{
+    width: 100%;
+}
+.main-container{
+    padding: 10px;
+}
+.btn{
+    display: block;
+    margin-bottom: 10px;
+}
+}
