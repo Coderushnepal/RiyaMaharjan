@@ -7,7 +7,7 @@ Password Field Toggle Using DOM
 
 Toggle Off              | Toggle On
 :---------------------------------|----------------------------------:
-![Password_toggle](../images/password_toggle/password_toggle(1).png)|![Password_toggle](../images/password_toggle/password_toggle(2).png)
+![Password_toggle](../images/password_toggle/passwordToggle(1).png)|![Password_toggle](../images/password_toggle/passwordToggle(2).png)
 
 
 
