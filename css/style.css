@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap");
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #d6d7e2;
+}
+header,
+.title,
+th {
+  font-family: "Playfair Display", serif;
+  
+}
+.name {
+  font-size: 18px;
+}
+.main-container {
+  padding: 30px 50px;
+  margin: 0px auto;
+}
+.index-container {
+  width: 80%;
+  margin: 0px auto;
+}
+table {
+  border: 1px solid #dddddd;
+  width: 100%;
+  background-color: #ffffff;
+}
+td,
+th {
+  border-collapse: collapse;
+  text-align: left;
+  padding: 14px;
+}
+th {
+    background-color: #e7e6fd;
+  border-bottom: 1px solid #dddddd;
+}
+a {
+  text-decoration: none;
+}
+.btn {
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: none;
+  margin-right: 10px;
+}
+.btn:last-child {
+  margin: 0px;
+}
+.btn:hover {
+  box-shadow: 0 2px 10px rgb(0 0 0 / 30%);
+  transition-duration: 0.2s;
+}
+.btn-html {
+  background-color: #ff8426;
+  color: #ffffff;
+}
+.btn-html:hover {
+  background-color: #ffa159;
+  cursor: pointer;
+}
+.btn-css {
+  background-color: #1663be;
+  color: #ffffff;
+}
+.btn-css:hover {
+  background-color: #1b7ced;
+  cursor: pointer;
+}
+.btn-js {
+  background-color: #ffc30b;
+  color: #ffffff;
+}
+.btn-js:hover {
+  background-color: #fce205;
+  cursor: pointer;
+}
+.btn-c {
+  background-color: #174a88;
+  color: #ffffff;
+}
+.btn-c:hover {
+  background-color: #1d59a1;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+.btn-code {
+  background-color: #151e3d;
+  color: #ffffff;
+}
+.btn-code:hover {
+  background-color: #222e5a;
+}
+.btn-demo {
+  background-color: #1f456e;
+  color: #ffffff;
+}
+.btn-demo:hover {
+  background-color: #285688;
+}
