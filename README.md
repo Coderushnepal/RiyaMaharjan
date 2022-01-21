@@ -1,5 +1,7 @@
 # Code Like Her Fellowship
-
+The link below(index) directs to the index page containing all my assignments in this fellowship.
+## **[Index](https://coderushnepal.github.io/RiyaMaharjan/index.html)**
+---
 All assignments have been listed below with its related topics
 
 ## Design Assignment
