@@ -1,5 +1,10 @@
-Non Responsive 
+# Static Lemburs Website
 
-Figma Code
+Static Lemburs Website (width: 1460px)
+<br>
+<br>
+## **[Demo](https://coderushnepal.github.io/RiyaMaharjan/Design/Assignment-3/Assignment%203(a)/)**
 
-Static website - works only on Computer-1440px
+![Newspaper_Layout](../../../Design/images/static_lemburs.png)
+
+
