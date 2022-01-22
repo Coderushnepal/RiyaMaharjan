@@ -9,6 +9,9 @@
 }
 body {
   font-family: "Lato", sans-serif;
+  min-width: 1440px;
+  max-width: 1440px;
+  overflow-x :hidden;
 }
 nav {
   height: 145px;
@@ -427,7 +430,7 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   margin-top: 82px;
-  padding: 5px 18px 5px 37px;
+  padding: 0px;
 }
 .trend-container {
   margin-top: 80px;
