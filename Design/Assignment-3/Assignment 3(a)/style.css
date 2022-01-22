@@ -12,6 +12,7 @@ body {
   min-width: 1440px;
   max-width: 1440px;
   overflow-x :hidden;
+  margin: 0px auto;
 }
 nav {
   height: 145px;
