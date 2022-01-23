@@ -33,8 +33,6 @@ form.setAttribute("id", "formId");
 form.setAttribute("name", "formName");
 main.appendChild(form);
 
-// form.setAttribute('name','myForm');
-// form.setAttribute('onsubmit','return validateForm()');
 var labelInputs = [
   {
     name: "Username",
@@ -83,13 +81,15 @@ labelInputs.forEach((element) => {
   var newLine = document.createElement("br");
   var newLine2 = document.createElement("br");
 
-  (labelItem.innerHTML = element.name),
-    labelItem.setAttribute("for", element.for),
-    (labelItem.style.color = "#777");
+  //label
+  labelItem.innerHTML = element.name;
+  labelItem.setAttribute("for", element.for), (labelItem.style.color = "#777");
   labelItem.style.marginBottom = "5px";
   formControl.appendChild(labelItem);
   formControl.appendChild(newLine),
-    itemInput.setAttribute("type", element.inputType);
+
+  //Input
+  itemInput.setAttribute("type", element.inputType);
   itemInput.setAttribute("placeholder", element.placeholder);
   itemInput.setAttribute("name", element.name);
   itemInput.id = element.id;
@@ -97,21 +97,22 @@ labelInputs.forEach((element) => {
   itemInput.style.fontSize = "14px";
   itemInput.style.border = "2px solid #f0f0f0";
   itemInput.style.width = "92%";
+  itemInput.style.borderRadius = "4px";
   formControl.appendChild(itemInput);
   formControl.appendChild(newLine2);
 
+  //Error message
   itemSmall.style.visibility = "hidden";
-  itemSmall.style.fontSize = "smaller";
-  itemSmall.id='small';
-//   itemSmall.className = "small";
+  itemSmall.id = "error-" + element.id;
   itemSmall.innerHTML = element.errorMsg;
   formControl.appendChild(itemSmall);
 
   form.appendChild(formControl);
   formControl.style.marginBottom = "10px";
-//   formControl.style.paddingBottom="20px";
   formControl.style.textAlign = "left";
 });
+
+body.appendChild(main);
 
 var submit = document.createElement("button");
 submit.innerHTML = "Submit";
@@ -123,37 +124,107 @@ submit.style.fontSize = "16px";
 submit.style.padding = "10px";
 submit.style.borderRadius = "4px";
 submit.setAttribute("type", "submit");
-// submit.setAttribute('onclick','validateForm()');
 main.appendChild(submit);
+
 submit.addEventListener("click", function (event) {
   event.preventDefault();
-  // return validateForm();
   validateForm();
 });
 
-body.appendChild(main);
-
-const usernameForm = document.getElementById("username");
-const passwordForm = document.getElementById("password");
-const emailForm = document.getElementById("email");
-const password2Form = document.getElementById("password2");
-const formInput = document.getElementById("form");
-
 function validateForm() {
-  var validateUsername = document.forms["formName"]["Username"].value;
+  var username = document.getElementById("username");
+  var email = document.getElementById("email");
+  var password = document.getElementById("password");
+  var password2 = document.getElementById("password2");
+  var errorUsername = document.getElementById("error-username");
+  var errorEmail = document.getElementById("error-email");
+  var errorPassword = document.getElementById("error-password");
+  var errorPassword2 = document.getElementById("error-password2");
+
+  //username validation
   if (
-    validateUsername.length < 3 ||
-    validateUsername == " " ||
-    validateUsername == null
+    requiredValidator(username, errorUsername) &&
+    lengthValidator(username, errorUsername, 3)
   ) {
-    document.getElementById("small").style.visibility = "visible";
-    return false;
+    username.style.borderColor = "#2ecc71";
+    errorUsername.style.visibility = "hidden";
   }
 
-  // var validateUserEmail = document.forms["formName"]["Email"].value;
-  // var mailformat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
-  // if (validateUserEmail.value.match(mailformat)) {
-  //   document.getElementById("small").style.visibility = "visible";
-  //   return false;
-  // }
+  //email validation
+  if (
+    requiredValidator(email, errorEmail) &&
+    emailValidator(email, errorEmail)
+  ) {
+    email.style.borderColor = "#2ecc71";
+    errorEmail.style.visibility = "hidden";
+  }
+
+  //password validatiom
+  if (
+    requiredValidator(password, errorPassword) &&
+    lengthValidator(password, errorPassword, 6)
+  ) {
+    password.style.borderColor = "#2ecc71";
+    errorPassword.style.visibility = "hidden";
+  }
+
+  //password confirmation
+  if (
+    confirmPasswordValidaor(password, password2, errorPassword2) &&
+    requiredValidator(password2, errorPassword2)
+  ) {
+    password2.style.borderColor = "#2ecc71";
+    errorPassword2.style.visibility = "hidden";
+  }
 }
+
+function requiredValidator(itemInput, errorHolder) {
+  if (itemInput.value === "") {
+    errorHolder.style.visibility = "visible";
+    var itemInfo = itemInput.id;
+    itemInfoUpper = itemInfo[0].toUpperCase() + itemInfo.slice(1);
+    errorHolder.innerHTML = `${itemInfoUpper} is required `;
+    itemInput.style.borderColor = "red";
+    errorHolder.style.color = "red";
+    return false;
+  }
+  return true;
+}
+
+function lengthValidator(itemInput, errorHolder, length) {
+  if (itemInput.value.length < length) {
+    errorHolder.style.visibility = "visible";
+    var itemInfo = itemInput.id;
+    itemInfoUpper = itemInfo[0].toUpperCase() + itemInfo.slice(1);
+    errorHolder.innerHTML = `${itemInfoUpper} must be at least ${length} characters`;
+    itemInput.style.borderColor = "red";
+    errorHolder.style.color = "red";
+    return false;
+  }
+  return true;
+}
+
+function emailValidator(itemInput, errorHolder) {
+  var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+  if (!mailFormat.test(itemInput.value)) {
+    errorHolder.style.visibility = "visible";
+    errorHolder.innerHTML = "Email is invalid";
+    itemInput.style.borderColor = "red";
+    errorHolder.style.color = "red";
+    return false;
+  }
+  return true;
+}
+
+function confirmPasswordValidaor(password, password2, errorHolder) {
+  if (password2.value !== password.value) {
+    errorHolder.style.visibility = "visible";
+    errorHolder.innerHTML = "Passwords do not match";
+    password2.style.borderColor = "red";
+    errorHolder.style.color = "red";
+    return false;
+  }
+  return true;
+}
+
