@@ -13,3 +13,5 @@
 - Assignment 6 - Password Toggle | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/JavaScript/Assignment-2) | [Demo](https://coderushnepal.github.io/RiyaMaharjan/JavaScript/Assignment-2/)
   
 - Assignment 7 - Random Balloon Generator | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/JavaScript/Assignment-3) | [Demo](https://coderushnepal.github.io/RiyaMaharjan/JavaScript/Assignment-3/)
+  
+- Assignment 8 - Form Validator | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/JavaScript/Assignment-4) | [Demo](https://coderushnepal.github.io/RiyaMaharjan/JavaScript/Assignment-4/)

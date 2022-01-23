@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap");
 body {
   font-family: "Lato", sans-serif;
-  background-color: #d6d7e2;
+  background-color: #f5efef;
 }
 header,
 .title,
@@ -15,10 +15,17 @@ th {
 .main-container {
   padding: 30px 50px;
   margin: 0px auto;
+ 
 }
 .index-container {
   width: 80%;
   margin: 0px auto;
+}
+.design-container, .js-container{
+  margin: 40px auto;
+  padding: 20px;
+  box-shadow: rgb(0 0 0 / 30%) 0px 2px 10px;
+  border-radius: 5px;
 }
 table {
   border: 1px solid #dddddd;
