@@ -1,4 +1,4 @@
-# Form Validator
+# Ball Bounce
 
 [![Demo Here](../images/Demo.png)](https://coderushnepal.github.io/RiyaMaharjan/JavaScript/Assignment-6/)
 
