@@ -1,4 +1,4 @@
-var defaultBallSize = 30;
+var defaultBallSize = 40;
 var containerSize = 450;
 document.body.style.background = '#eeeeee'
 document.body.style.fontFamily = 'Open Sans', 'sans-serif';

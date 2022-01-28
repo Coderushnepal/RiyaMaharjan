@@ -106,6 +106,20 @@ a {
 .btn-demo:hover {
   background-color: #285688;
 }
+.btn-doc{
+  background-color: #FF2E2E;
+  color:#ffffff
+}
+.btn-doc:hover{
+  background-color: #FF5C5C;
+}
+.btn-pre{
+  background-color: #800000;
+  color:#ffffff
+}
+.btn-pre:hover{
+  background-color: #8b0224;
+}
 @media only screen and (max-width: 938px){
     .index-container{
         width: 100%;

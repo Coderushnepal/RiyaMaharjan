@@ -19,3 +19,5 @@
 - Assignment 9 - Hangman | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/JavaScript/Assignment-5) | [Demo](https://coderushnepal.github.io/RiyaMaharjan/JavaScript/Assignment-5/)
   
 - Assignment 10 - Ball Bounce | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/JavaScript/Assignment-6) | [Demo](https://coderushnepal.github.io/RiyaMaharjan/JavaScript/Assignment-6/)
+  
+- Assignment 11 - Multiple Ball Bounce | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/JavaScript/Assignment-7) | [Demo](https://coderushnepal.github.io/RiyaMaharjan/JavaScript/Assignment-7/)
