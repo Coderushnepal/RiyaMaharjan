@@ -22,15 +22,15 @@ function Ball(size, id) {
         var speedTop = Math.ceil(parseInt(Math.random() * defaultSpeed));
         var speedLeft = Math.ceil(parseInt(Math.random() * defaultSpeed));
 
-        var bounce = false;
-        var interval;
+        // var bounce = false;
+        // var interval;
         this.element.addEventListener("click", function (e) {
-            console.log(this.id);
-            if (bounce) {
-                bounce = false;
-                clearInterval(interval);
-            } else {
-                bounce = true;
+            // console.log(this.id);
+            // if (bounce) {
+            //     bounce = false;
+            //     clearInterval(interval);
+            // } else {
+                // bounce = true;
                 interval = setInterval(function () {
                     var newTop = parseInt(e.target.style.top) + speedTop + "px";
                     e.target.style.top = newTop;
@@ -47,7 +47,8 @@ function Ball(size, id) {
                     }
                 }, 1000 / 60); //60fps
             }
-        });
+        // }
+        );
         this.element.addEventListener('mouseover', () => {
             this.element.style.cursor = 'pointer';
         })
