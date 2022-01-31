@@ -21,3 +21,7 @@
 - Assignment 10 - Ball Bounce | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/JavaScript/Assignment-6) | [Demo](https://coderushnepal.github.io/RiyaMaharjan/JavaScript/Assignment-6/)
   
 - Assignment 11 - Multiple Ball Bounce | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/JavaScript/Assignment-7) | [Demo](https://coderushnepal.github.io/RiyaMaharjan/JavaScript/Assignment-7/)
+  
+- Assignment 12 - Expense Tracker | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/JavaScript/Assignment-8) | [Demo](https://coderushnepal.github.io/RiyaMaharjan/JavaScript/Assignment-8/)
+  
+- Assignment 13 - Infinite Blog | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/JavaScript/Assignment-9) | [Demo](https://coderushnepal.github.io/RiyaMaharjan/JavaScript/Assignment-9/)
