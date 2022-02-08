@@ -44,3 +44,7 @@ All assignments have been listed below with its related topics
 - Assignment 12 - Expense Tracker | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/JavaScript/Assignment-8) | [Demo](https://coderushnepal.github.io/RiyaMaharjan/JavaScript/Assignment-8/)
   
 - Assignment 13 - Infinite Blog | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/JavaScript/Assignment-9) | [Demo](https://coderushnepal.github.io/RiyaMaharjan/JavaScript/Assignment-9/)
+
+## Node.JS Assignment
+
+* Assignment 1 - HTTP server and File Server | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/NodeJs/Assignment-1) 
