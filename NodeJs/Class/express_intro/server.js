@@ -36,5 +36,3 @@ const PORT = 8848;
 server.listen(PORT, () => {
   console.log(`Listening on 127.0.0.1:${PORT}\n`);
 });
-
-// make api route
