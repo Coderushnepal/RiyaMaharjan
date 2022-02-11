@@ -123,3 +123,15 @@ server.listen(PORT, () => {
 //DEBUG -> for developer debugging purpose. might show actual data or objects "Recieved request payload: {"firstName":"abc","lastName":"xyz"}"
 
 // validation -> check if exists -> update -> successful
+// Validation -> Check if exists -> Update -> Sucessful
+
+// INFO: Starting the validation process
+// ERROR: Validation failed. firstName should be a string and not a number
+// DEBUG: Payload received: { "firstName": "abc", "lastName": "xyz" }
+
+// INFO: Validation sucessful. Now checking if the data exists
+// ERROR: Cannot find the associated data.
+
+// INFO: Data existence verfified. Updating the data.
+// DEBUG: Updated data: { "firstName": "abc", "lastName": "xyz", "address": "Nepal" }
+// INFO: Successfully updated the data
