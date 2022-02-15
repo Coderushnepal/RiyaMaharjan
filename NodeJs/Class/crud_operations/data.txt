@@ -1,0 +1,4 @@
+{"name":"Riya Maharjan","faculty":"CSIT"}
+{"name":"Riya Maharjan","faculty":"CSIT"}
+{"name":"Riya Maharjan","faculty":"CSIT"}
+{"name":"Manisha","faculty":"CSIT"}
