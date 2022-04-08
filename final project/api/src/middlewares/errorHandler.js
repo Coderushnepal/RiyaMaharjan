@@ -23,6 +23,14 @@ function buildError(err) {
     };
   }
 
+  if (err.name === 'UnauthorizedError') {
+    return {
+      code: HttpStatusCodes.UNAUTHORIZED,
+      message: HttpStatusCodes.getStatusText(HttpStatusCodes.UNAUTHORIZED),
+      details: err.message,
+    };
+  }
+
   return {
     code: HttpStatusCodes.INTERNAL_SERVER_ERROR,
     message: HttpStatusCodes.getStatusText(

@@ -8,6 +8,10 @@ const schema = Joi.object({
     added: Joi.array().items(Joi.string()).optional(),
     removed: Joi.array().items(Joi.string()).optional(),
   }).optional(),
+  reviews: Joi.object({
+    added: Joi.array().items(Joi.string()).optional(),
+    removed: Joi.array().items(Joi.string()).optional(),
+  }).optional(),
 });
 
 export default schema;

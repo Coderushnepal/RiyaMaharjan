@@ -26,7 +26,7 @@ server.use(errorHandler);
 
 // const PORT = 8848;
 
-console.log({ port: process.env.PORT, password: process.env.PASSWORD });
+// console.log({ port: process.env.PORT, password: process.env.PASSWORD });
 
 server.listen(process.env.PORT, () => {
   logger.info(`Listening on 127.0.0.1:${process.env.PORT}`);

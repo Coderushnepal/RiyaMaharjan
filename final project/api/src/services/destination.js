@@ -1,8 +1,8 @@
-// import httpStatusCodes from 'http-status-codes';
 import Boom from '@hapi/boom';
 
 import Destination from '../models/Destination.js';
 import DestinationImage from '../models/destinationImage.js';
+// import Review from '../models/Review.js';
 import logger from '../utils/logger.js';
 
 /**
@@ -13,7 +13,7 @@ import logger from '../utils/logger.js';
  * */
 export async function getAllDestinations(query) {
   console.log(query);
-  const locationFilter = query.locationId ? query.locationId.split(',') : [];
+
   const priceFilter = query.price ? query.price.split(',').map(Number) : [];
 
   logger.info('Fetching a list of all destinations');
@@ -23,23 +23,17 @@ export async function getAllDestinations(query) {
   const paresdDestinations = destinations.map((destination) => ({
     ...destination,
     images: destination.images ? destination.images.split(',') : [],
+    reviews: destination.reviews ? destination.reviews.split(',') : [],
   }));
 
   let filteredDestinations = paresdDestinations;
-
-  console.log(filteredDestinations, locationFilter);
-
-  if (locationFilter.length) {
-    filteredDestinations = paresdDestinations.filter((destination) =>
-      locationFilter.includes(destination.locationId)
-    );
-  }
 
   if (priceFilter.length) {
     filteredDestinations = paresdDestinations.filter((destination) =>
       priceFilter.includes(destination.price)
     );
   }
+  console.log('Hi');
 
   return {
     data: filteredDestinations,
@@ -68,6 +62,7 @@ export async function getDestination(id) {
   const parsedDesatination = {
     ...destination,
     images: destination.images ? destination.images.split(',') : [],
+    reviews: destination.reviews ? destination.reviews.split(',') : [],
   };
 
   return {
@@ -80,7 +75,6 @@ export async function addDestination(params) {
   logger.info(`Payload Recieved ${params}`);
 
   const destinationTableInsertParams = {
-    // location
     destinationName: params.destinationName,
     description: params.description,
     price: params.price,
@@ -95,6 +89,7 @@ export async function addDestination(params) {
 
     throw new Boom.badRequest('Data with same payload already exists');
   }
+
   logger.info('Saving new destination data');
   const [destinationTableInsertData] = await new Destination().save(
     destinationTableInsertParams
@@ -114,6 +109,22 @@ export async function addDestination(params) {
       await new DestinationImage().save(insertData);
     });
   }
+
+  // if (params.reviews.length) {
+  //   logger.info('Creating insert data for reviews table');
+  //   const destinationReviewsInsertData = params.reviews.map((comment) => ({
+  //     destinationId: destinationTableInsertData.id,
+  //     reviewerId:userTableInsertParams.id,
+  //     comment: comment,
+  //   }));
+
+  //   logger.info(
+  //     `Inserting ${destinationImagesInsertData.length} records into the destination_images table `
+  //   );
+  //   destinationImagesInsertData.forEach(async (insertData) => {
+  //     await new DestinationImage().save(insertData);
+  //   });
+  // }
 
   logger.info('Retriving the saved car details');
   const data = await new Destination().getDestinationDetails(
