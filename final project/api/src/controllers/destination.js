@@ -8,7 +8,7 @@ import * as destinationService from '../services/destination.js'; // only for na
  * @param {Function} next
  */
 export function getDestinations(req, res, next) {
-  // console.log(query);
+
   destinationService
     .getAllDestinations(req.query)
     .then((data) => res.json(data))

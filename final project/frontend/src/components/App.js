@@ -15,13 +15,8 @@ import {
 
 import * as routes from '../constants/routes';
 
-// landing page --> /destinations, /
-// destination --> /destination/id
-//login --> /login
-
 export default function App() {
   return (
-
     <BrowserRouter history={history}>
       <Switch>
         <Route exact path={routes.DESTINATIONS} component={DestinationList} />
@@ -32,6 +27,5 @@ export default function App() {
         <Redirect to={routes.DESTINATIONS} />
       </Switch>
     </BrowserRouter>
-
   );
 }

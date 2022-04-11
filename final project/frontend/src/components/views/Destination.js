@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import * as destinationService from '../../services/destination'
-import styled from "styled-components";
+
 
 function Destination(props) {
   // console.log(props)
@@ -26,7 +26,7 @@ function Destination(props) {
 
 
   return (
-    <Section id="recommend">
+    <div id="recommend">
       <div className='title'>
         <h1> {destination.destinationName}</h1>
       </div>
@@ -40,11 +40,9 @@ function Destination(props) {
 
       )}
 
-    </Section>
+    </div>
   )
 
 }
 
 export default Destination;
-
-const Section = styled.section``

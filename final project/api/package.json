@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node src/index.js",
-    "start:dev": "NODE_ENV=development nodemon --watch  src/ src/index.js",
+    "start:dev": " nodemon --watch  src/ src/index.js",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "rollback": "knex migrate:rollback --knexfile src/knexfile.js",

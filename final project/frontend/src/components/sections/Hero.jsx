@@ -1,11 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
 import homeImage from '../../assests/heading-image.jpg'
 
 export default function Hero() {
     return (
         <>
-         <Section id='hero'>
+         <div id='hero'>
         <div className="background">
             <img src={homeImage} alt='backgroundImage'/>
         </div>
@@ -30,129 +29,7 @@ export default function Hero() {
                 <button>Book Now</button>
             </div>
         </div>
-    </Section>
+    </div>
         </>
     );
 }
-
-const Section= styled.section`
-position:relative;
-margin-top: 2rem;
-width:100%;
-heigth:100%;
-.background {
-    img{
-        height:70%;
-        width: 100%;
-        filter:brightness(60%);
-        border-radius:30px;
-    }
-}
-.content{
-    height:100%;
-    width:100%;
-    position:absolute;
-    top:0;
-    z-index:3;
-    text-align:center;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    gap:1rem;
-    .title{
-        color:#ffffff;
-        h1{
-            font-size:3rem;
-            letter-spacing:0.2rem;
-        }
-        p{
-            text-align:center;
-            padding:0 30vw;
-            margin-top:0.5rem;
-            font-size:1.2rem;
-        }
-    }
-    .search{
-        display:flex;
-        background-color:#ffffffce;
-        padding:0.5rem;
-        border-radius:0.5rem;
-        .container{
-            display:flex;
-            align-item:center;
-            justify-content: center;
-            flex-direction:column;
-            padding: 0 1.5rem;
-            label{
-                font-size:1.1rem;
-                color:#03045e;
-                margin-bottom:0.5rem;
-            }
-            input{
-                background-color:transparent;
-                border:none;
-                text-align:center;
-                color:black;
-                &[type="date"]{
-                    padding-left:3rem;
-                }
-                &::placeholder{
-                    color:#000000;
-                }
-                &:focus{
-                    outline:none;
-                }
-            }
-        }
-        button{
-            padding:1rem;
-            cursor:pointer;
-            border-radius:0.3rem;
-            border:none;
-            color:#ffffff;
-            background-color: #4361ee;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            transition: 0.3s ease-in-out;
-            &:hover{
-                background-color: #023e8a;
-            }
-        }
-    }
-}
-
-@media screen and (min-width:280px) and (max-width:980px) {
-    height: 25rem;
-    .background{
-        img{
-            height:370px;
-        }
-    }
-    .content{
-        .title{
-            h1{
-                font-size:1rem; 
-            }
-            p{
-                font-size:0.8rem;
-                padding:1vw;
-            }
-        }
-        .search{
-            flex-direction: column;
-            padding:0.8rem;
-            .container{
-                padding: 0 0.8rem;
-                input[type='date']{
-                    padding-left: 1rem;
-                }
-            }
-            button{
-                padding: 1rem;
-                font-size:1rem;
-            }
-        }
-    }
-}
-`;

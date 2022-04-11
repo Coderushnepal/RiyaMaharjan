@@ -15,6 +15,7 @@ export async function getAllDestinations(query) {
   console.log(query);
 
   const priceFilter = query.price ? query.price.split(',').map(Number) : [];
+  const destinationFilter = query.destinationName ? query.destinationName.split(',') : [];
 
   logger.info('Fetching a list of all destinations');
 
@@ -31,6 +32,12 @@ export async function getAllDestinations(query) {
   if (priceFilter.length) {
     filteredDestinations = paresdDestinations.filter((destination) =>
       priceFilter.includes(destination.price)
+    );
+  }
+
+  if (destinationFilter.length) {
+    filteredDestinations = paresdDestinations.filter((destination) =>
+      destinationFilter.includes(destination.destinationName)
     );
   }
   console.log('Hi');
