@@ -13,14 +13,8 @@ export default function Navbar() {
                 <img src={logo} alt="logo" />
             </div>
         </div>
-        
-        <div className='searchbar'>
-        <input className='header_input' type='search' placeholder='Search destination'/>
-        <button>Search</button>
-        <button className='icon_search'><BiSearchAlt2/></button>
-        </div>
 
-        <div>
+        <div className='user'>
         <button><Link to={`/register`}>Register</Link></button>
         <button><Link to={`/login`}>Login</Link></button>
         </div>

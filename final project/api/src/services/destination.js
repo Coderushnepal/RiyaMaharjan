@@ -78,6 +78,12 @@ export async function getDestination(id) {
   };
 }
 
+/**
+ * Post destination 
+ *
+ * @param {object} 
+ * @returns {object}
+ */
 export async function addDestination(params) {
   logger.info(`Payload Recieved ${params}`);
 

@@ -15,10 +15,13 @@
     font-weight:900;
     text-transform: uppercase;
 }
-
-.brand .toggle{
-    display:none;
+.user{
+   display: flex;
+   
 }
+/* .brand .toggle{
+    display:none;
+} */
 .searchbar{
     width:50%;
 }
@@ -66,9 +69,9 @@ input:focus{
     .brand .toggle{
         display: block;
     }
-    ul, button{
+    /* ul, button{
         display:none;
-    }
+    } */
     .header_input{
         display:inline-block;
         display:45%;

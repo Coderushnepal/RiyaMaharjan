@@ -64,6 +64,7 @@ export async function login(params) {
     id: existingUser.id,
     name: existingUser.name,
     email: existingUser.email,
+    is_admin:existingUser.isAdmin,
   };
 
   const token = createToken({ user });
@@ -71,5 +72,22 @@ export async function login(params) {
   return {
     data: { token, user },
     message: 'Logged In successfully',
+  };
+}
+
+/**
+ * Get list of users
+ *
+ * @returns {Object}
+ *
+ */
+ export async function getUsers() {
+  logger.info('Fetching Users');
+
+  const data = await new User().getAll();
+
+  return {
+    data,
+    message: 'List of Users',
   };
 }

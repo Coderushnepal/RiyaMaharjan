@@ -27,3 +27,17 @@ export function login(req, res, next) {
     .then((data) => res.json(data))
     .catch((err) => next(err));
 }
+
+/**
+ * Controller to get details of all users
+ *
+ * @param {Object} req
+ * @param {Object} res
+ * @param {Function} next
+ */
+ export function getUsers(req, res, next) {
+  userService
+    .getUsers()
+    .then((data) => res.json(data))
+    .catch((err) => next(err));
+}

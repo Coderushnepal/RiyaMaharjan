@@ -1,44 +1,64 @@
 import React, { useState } from 'react';
+import axios from "axios";
 
+import { useHistory } from "react-router-dom"
 
-function Login(props) { 
+const Login=() =>{
 
- const [email, setEmail]=useState('');
- let errorsObj = {email: '', password: ''};
- const [errors,setErrors]=useState(errorsObj);
+  const [userEmailLog, setuserEmailLog] = useState("");
+  const [userPasswordLog, setuserPasswordLog] = useState("");
 
- const [password, setPassword]=useState('');
+  const history = useHistory()
 
- function onSignUp(e){
-  e.preventDefault();
-  let error=false;
-  const errorObj ={...errorsObj};
-  if(email === ''){
-     errorObj.email ='Email is required';
-     error=true;
-  }
-  if(password===''){
-    errorObj.password ='Password is required';
-    error=true;
-  }
-  setErrors(errorObj);
-    if(!error){
-      console.log('Form Submit')
-    
-  }
- }
+  function onLogUsers(e) {
+    e.preventDefault();
+    const logData = {
+      email: userEmailLog,
+      password: userPasswordLog,
+    };
 
+    axios
+      .post("http://127.0.01:1234/login", logData)
+      .then((response) => {
+        const {data} = response;
+        console.log(data);
+
+        if (data.message === "Logged in succesfully") {
+          alert("Logged In Successfully !!!")
+          localStorage.setItem("Token", data.data.token);
+          localStorage.setItem("Admin", data.data.user.is_admin);
+          history.push("/");
+
+        }
+      }).catch((err)=>{
+       alert("Invalid Credentials")
+      })
+
+    };
   return <div className='main'>
       <h1 className='heading'>Log In</h1>
-      <form onSubmit={onSignUp}>
+      <form onSubmit={onLogUsers}>
           <div>
-            <input type='text'  className='mainLoginInput' placeholder='&#61447; Email' value={email} onChange={(e)=>setEmail(e.target.value)}/>
+            <input type='text'  
+              className='mainLoginInput' 
+              placeholder='&#61447; Email'  
+              onChange={(e)=>setuserEmailLog(e.target.value)}
+              value={userEmailLog}
+              name="email"
+              required/>{" "}
         </div>
-        {errors.email && <div>{errors.email}</div> }
+
         <div>
-            <input type='password' className='mainLoginInput passwordInput ' placeholder='&#61475; Password' value={password} onChange={(e)=>setPassword(e.target.value)}/>
+            <input type='password' 
+            className='mainLoginInput passwordInput ' 
+            placeholder='&#61475; Password' 
+            value={userPasswordLog} 
+            onChange={(e)=>setuserPasswordLog(e.target.value)}
+            name="password"
+            required
+            />
         </div>
-        {errors.password && <div>{errors.password}</div>}
+       
         <div>
           <button type='submit'>
             Log In

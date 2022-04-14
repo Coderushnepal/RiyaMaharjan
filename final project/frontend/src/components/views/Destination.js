@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import * as destinationService from '../../services/destination'
-
+import '../../assests/css/destination.css'
 
 function Destination(props) {
   // console.log(props)
@@ -26,20 +26,15 @@ function Destination(props) {
 
 
   return (
-    <div id="recommend">
+    <div id="destination" >
       <div className='title'>
         <h1> {destination.destinationName}</h1>
       </div>
-      {isLoading ? (
-        <h1>Loading...</h1>
-      ) : (
+       
         <div>
           <img src={destination.images} />
-          <p>{destination.description}</p>
         </div>
-
-      )}
-
+          <p>{destination.description}</p>
     </div>
   )
 

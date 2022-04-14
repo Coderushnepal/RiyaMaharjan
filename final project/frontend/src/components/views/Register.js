@@ -1,23 +1,85 @@
-import React from 'react';
+import React,{useState} from 'react';
+import axios from  "axios";
 
-function Register() {
+import { useHistory } from "react-router-dom"
+
+const Register=()=>{
+  const [userNameSign, setuserNameSign] = useState("");
+  const [userEmailSign, setuserEmailSign] = useState("");
+  const [userPasswordSign, setuserPasswordSign] = useState("");
+
+  const history = useHistory();
+
+  function onAddUsers(e) {
+    e.preventDefault();
+    const postData = {
+      name: userNameSign,
+      email: userEmailSign,
+      password: userPasswordSign,
+    };
+
+    axios
+      .post("http://127.0.01:1234/users", postData)
+      .then((response) => {
+        const {data} = response;
+        console.log(data);
+        console.log(data.message);
+
+        if (data.message === "Added user successfully") {
+          localStorage.setItem("Token", data.data.token);
+          history.push("/");
+          alert("User Added Successfully")
+        }
+
+
+      });
+}
+
+ 
+ 
   return (
     <div className='main'>
       <h1 className='heading'>Register</h1>
-      <form >
+      <form onSubmit={onAddUsers}>
       <div>
-            <input type='text'  className='mainLoginInput nameInput' placeholder='&#61447; Username' />
-        </div>
-          <div>
-            <input type='text'  className='mainLoginInput emailInput' placeholder='&#61447; Email' />
+            <input type='text'  
+              onChange={(e) => {
+              setuserNameSign(e.target.value);
+              }}
+              className='mainLoginInput nameInput' 
+              placeholder='&#61447; Username' 
+              value={userNameSign}
+              name="username"
+              required
+            />{" "}
+      </div>
+
+      <div>
+        <input type='email'
+          onChange={(e) => {
+            setuserEmailSign(e.target.value);
+          }}  
+          className='mainLoginInput emailInput' 
+          placeholder='&#61447; Email' 
+          value={userEmailSign}
+          name="email"
+          required
+          />{" "}
         </div>
        
         <div>
-            <input type='password' className='mainLoginInput passwordInput ' placeholder='&#61475; Password' />
+            <input type='password' 
+             onChange={(e) => {
+              setuserPasswordSign(e.target.value);
+              }}
+              className='mainLoginInput passwordInput ' 
+              placeholder='&#61475; Password'
+              value={userPasswordSign}
+              name="password"
+              required
+               />
         </div>
-        <div>
-            <input type='password' className='mainLoginInput passwordCheck ' placeholder='&#61475; Confirm Password' />
-        </div>
+        
         <div>
           <button type='submit'>
            SIGN UP
@@ -26,6 +88,6 @@ function Register() {
       </form>
     </div>
   )
-}
+};
 
 export default Register;

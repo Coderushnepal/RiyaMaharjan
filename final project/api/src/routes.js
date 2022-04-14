@@ -14,6 +14,8 @@ import updateDestinationSchema from './schemas/updateDestination.js';
 import addUserSchema from './schemas/addUser.js';
 import loginSchema from './schemas/login.js';
 import getDestinationsQuerySchema from './schemas/getDestinationQuery.js';
+import addBookingQuerySchema from './schemas/addBooking.js';
+import getUserQuerySchema from './schemas/getUsersQuery.js';
 
 // import authenticate from './middlewares/authenticate.js';
 
@@ -68,8 +70,10 @@ router.delete(
 );
 
 router.post('/users', validateBody(addUserSchema), userController.addUser);
+router.get('/users',  userController.getUsers);
 
 router.post('/login', validateBody(loginSchema), userController.login);
 
-router.get('/bookings', authenticate, bookingController.getallBookings);
+router.get('/bookings',  bookingController.getallBookings);
+router.post('/bookings', validateBody(addBookingQuerySchema), bookingController.postBookings);
 export default router;
