@@ -1,112 +1,112 @@
-#hero{
-    position:relative;
-    margin-top: 2rem;
+#hero {
+  position: relative;
+  margin-top: 2rem;
 }
-.background img{
-    height:700px;
-    width: 100%;
-    filter:brightness(60%);
-    border-radius:30px;
+.background img {
+  height: 700px;
+  width: 100%;
+  filter: brightness(60%);
+  border-radius: 30px;
 }
-.content{
-    height:100%;
-    width:100%;
-    position:absolute;
-    top:0;
-    z-index:3;
-    text-align:center;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    gap:1rem;
+.content {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
-.content .title{
-    color:#ffffff;
+.content .title {
+  color: #ffffff;
 }
-.title h1{
-    font-size:3rem;
-    letter-spacing:0.2rem;
+.title h1 {
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
 }
-.title p{
-    text-align:center;
-    padding:0 30vw;
-    margin-top:0.5rem;
-    font-size:1.2rem;
+.title p {
+  text-align: center;
+  padding: 0 30vw;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
 }
-.search{
-    display:flex;
-    background-color:#ffffffce;
-    padding:0.5rem;
-    border-radius:0.5rem;  
+.search {
+  display: flex;
+  background-color: #ffffffce;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
-.container{
-    display:flex;
-    align-items:center;
-    justify-content: center;
-    flex-direction:column;
-    padding: 0 1.5rem;
+.formItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 1.5rem;
 }
-.container label{
-    font-size:1.1rem;
-    color:#03045e;
-    margin-bottom:0.5rem;
+.formItem label {
+  font-size: 1.1rem;
+  color: #03045e;
+  margin-bottom: 0.5rem;
 }
-.container input{
-    background-color:transparent;
-    border:none;
-    text-align:center;
-    color:black;
+.formItem input {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  color: black;
 }
-.conatiner input [type="date"]{
-    padding-left:3rem;
+.conatiner input [type="date"] {
+  padding-left: 3rem;
 }
-.conatiner input::placeholder{
-    color:#000000;
+.conatiner input::placeholder {
+  color: #000000;
 }
-.conatiner input:focus{
-    outline: none;
+.conatiner input:focus {
+  outline: none;
 }
-button{
-    padding:1rem;
-        cursor:pointer;
-        border-radius:0.3rem;
-        border:none;
-        color:#ffffff;
-        background-color: #4361ee;
-        font-size: 1.1rem;
-        text-transform: uppercase;
-        transition: 0.3s ease-in-out;
+button {
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  border: none;
+  color: #ffffff;
+  background-color: #4361ee;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
 }
-button:hover{
-    background-color: #023e8a;
+button:hover {
+  background-color: #023e8a;
 }
-@media screen and (min-width:280px) and (max-width:980px){
-    .hero{
-        height: 25rem;
-    }
-    .background img{
-        height:370px;
-    }
-    .content .title h1{
-        font-size:1rem;
-    }
-    .content .title p{
-        font-size:0.8rem;
-        padding:1vw;
-    }
-    .search{
-        flex-direction: column;
-        padding:0.8rem;
-    }
-    .container{
-        padding: 0 0.8rem;
-    }
-    .conatiner input[type="date"]{
-        padding-left: 1rem;
-    }
-    .search button{
-        padding: 1rem;
-                font-size:1rem;
-    }
+@media screen and (min-width: 280px) and (max-width: 980px) {
+  .hero {
+    height: 25rem;
+  }
+  .background img {
+    height: 370px;
+  }
+  .content .title h1 {
+    font-size: 1rem;
+  }
+  .content .title p {
+    font-size: 0.8rem;
+    padding: 1vw;
+  }
+  .search {
+    flex-direction: column;
+    padding: 0.8rem;
+  }
+  .formItem {
+    padding: 0 0.8rem;
+  }
+  .conatiner input[type="date"] {
+    padding-left: 1rem;
+  }
+  .search button {
+    padding: 1rem;
+    font-size: 1rem;
+  }
 }

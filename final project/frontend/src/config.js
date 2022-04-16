@@ -5,7 +5,10 @@ const config = {
 
   endpoints: {
     destinations: 'destinations',
-    destination: 'destinations/:id'
+    destination: 'destinations/:id',
+    login: 'login',
+    register: 'register',
+    users: 'users'
   },
 };
 

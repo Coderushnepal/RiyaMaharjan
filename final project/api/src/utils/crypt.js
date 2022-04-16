@@ -28,8 +28,8 @@ export function compare(password, hash) {
  * @param {Object} user
  * @returns {string}
  */
-export function createToken(user) {
-  return jwt.sign(user, process.env.TOKEN_SECRET, {
+export function createToken(data) {
+  return jwt.sign(data, process.env.TOKEN_SECRET, {
     expiresIn: process.env.TOKEN_EXPIRATION,
   });
 }

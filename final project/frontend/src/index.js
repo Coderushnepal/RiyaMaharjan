@@ -2,14 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
-import { createStore, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
-import rootReducer from './reducers';
-
+import axios from 'axios';
 import "./public";
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
+import store from './store/store';
+
+axios.defaults.headers.common['Authorization']= `Bearer ${localStorage.getItem('Token')}`;
 
 ReactDOM.render(
   <React.StrictMode>

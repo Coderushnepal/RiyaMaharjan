@@ -71,6 +71,7 @@ router.delete(
 
 router.post('/users', validateBody(addUserSchema), userController.addUser);
 router.get('/users',  userController.getUsers);
+router.get('/profile',userController.getUser);
 
 router.post('/login', validateBody(loginSchema), userController.login);
 

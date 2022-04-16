@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import axios from  "axios";
-
+import cogoToast from 'cogo-toast';
 import { useHistory } from "react-router-dom"
 
 const Register=()=>{
@@ -18,6 +18,7 @@ const Register=()=>{
       password: userPasswordSign,
     };
 
+    localStorage.removeItem("Token");
     axios
       .post("http://127.0.01:1234/users", postData)
       .then((response) => {
@@ -25,14 +26,18 @@ const Register=()=>{
         console.log(data);
         console.log(data.message);
 
-        if (data.message === "Added user successfully") {
-          localStorage.setItem("Token", data.data.token);
-          history.push("/");
-          alert("User Added Successfully")
+        
+        if (response.status===200) {
+          history.push("/login");
         }
 
+      })
+      .catch((err)=>{
+        const {response} = err;
+        console.log(response.data);
+        cogoToast.error(response.data.message)
+       })
 
-      });
 }
 
  
@@ -50,6 +55,7 @@ const Register=()=>{
               placeholder='&#61447; Username' 
               value={userNameSign}
               name="username"
+              autoComplete='off'
               required
             />{" "}
       </div>
@@ -63,6 +69,7 @@ const Register=()=>{
           placeholder='&#61447; Email' 
           value={userEmailSign}
           name="email"
+          autoComplete='off'
           required
           />{" "}
         </div>
@@ -76,6 +83,7 @@ const Register=()=>{
               placeholder='&#61475; Password'
               value={userPasswordSign}
               name="password"
+              autoComplete='off'
               required
                />
         </div>

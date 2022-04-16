@@ -14,15 +14,15 @@ export default function Hero() {
                 <p>Travel and find happiness within yourself. Experience holidays in Nepal and find the best time to go and the best places to visit.</p>
             </div>
             <div className="search">
-                <div className="container">
+                <div className="formItem">
                     <label htmlFor="">Where you want to go</label>
                     <input type='text' placeholder='Search your location'/>
                 </div>
-                <div className="container">
+                <div className="formItem">
                     <label htmlFor="">Check-in</label>
                     <input type='date' />
                 </div>
-                <div className="container">
+                <div className="formItem">
                     <label htmlFor="">Check-out</label>
                     <input type='date' />
                 </div>

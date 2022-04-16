@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from "axios";
+import cogoToast from 'cogo-toast';
 
 import { useHistory } from "react-router-dom"
 
@@ -23,15 +24,16 @@ const Login=() =>{
         const {data} = response;
         console.log(data);
 
-        if (data.message === "Logged in succesfully") {
-          alert("Logged In Successfully !!!")
+        if (response.status===200) {
+          cogoToast.success("Logged in successfully")
           localStorage.setItem("Token", data.data.token);
+          console.log(localStorage.getItem('Token'))
           localStorage.setItem("Admin", data.data.user.is_admin);
           history.push("/");
-
         }
       }).catch((err)=>{
        alert("Invalid Credentials")
+       console.log(err)
       })
 
     };

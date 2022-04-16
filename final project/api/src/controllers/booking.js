@@ -23,7 +23,7 @@ export function getallBookings(req, res, next) {
  */
  export function postBookings(req, res, next) {
   bookingService
-    .addBooking()
+    .addBooking(req.body)
     .then((data) => res.json(data))
     .catch((err) => next(err));
 }

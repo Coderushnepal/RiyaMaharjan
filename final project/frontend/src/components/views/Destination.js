@@ -4,12 +4,6 @@ import * as destinationService from '../../services/destination'
 import '../../assests/css/destination.css'
 
 function Destination(props) {
-  // console.log(props)
-  const [isLoading, setIsLoading] = useState(false);
-
-  // const destinations = useSelector(destinations => destinations.destination);
-  // const destination = destinations.find(({ id }) => +params.id === id)
-
   const [destination, setDestination] = useState({});
   console.log(props)
   const { id } = props.match.params;
@@ -32,7 +26,7 @@ function Destination(props) {
       </div>
        
         <div>
-          <img src={destination.images} />
+          <img src={destination.images?.[1]} />
         </div>
           <p>{destination.description}</p>
     </div>

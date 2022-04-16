@@ -67,7 +67,7 @@ export async function login(params) {
     is_admin:existingUser.isAdmin,
   };
 
-  const token = createToken({ user });
+  const token = createToken({ id:user.id });
 
   return {
     data: { token, user },
@@ -81,13 +81,27 @@ export async function login(params) {
  * @returns {Object}
  *
  */
- export async function getUsers() {
+ export async function getUsers(req) {
   logger.info('Fetching Users');
 
+  console.log(req.headers);
   const data = await new User().getAll();
 
   return {
     data,
     message: 'List of Users',
   };
+}
+
+/**
+ * Get list of users
+ *
+ * @returns {Object}
+ *
+ */
+ export async function getUser(id) {
+ 
+  const data = await new User(). getById(id);
+
+  return data;
 }

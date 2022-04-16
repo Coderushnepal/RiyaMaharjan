@@ -1,6 +1,6 @@
 // import { FETCH_DESTINATIONS } from "../actions/destinations";
 
-import { FETCH_DESTINATIONS_FULFILLED, FETCH_DESTINATIONS_PENDING, FETCH_DESTINATIONS_REJECTED } from "../actions/destinations";
+import { FETCH_DESTINATIONS_FULFILLED, FETCH_DESTINATIONS_PENDING, FETCH_DESTINATIONS_REJECTED } from "../../actions/destinations";
 
 const INITIAL_STATE = {
     destinations: [],
