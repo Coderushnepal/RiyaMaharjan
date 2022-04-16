@@ -28,12 +28,13 @@ const Login=() =>{
           cogoToast.success("Logged in successfully")
           localStorage.setItem("Token", data.data.token);
           console.log(localStorage.getItem('Token'))
-          localStorage.setItem("Admin", data.data.user.is_admin);
+          localStorage.setItem("User", JSON.stringify(data.data.user));
           history.push("/");
         }
       }).catch((err)=>{
-       alert("Invalid Credentials")
-       console.log(err)
+        const {response} = err;
+        console.log(response.data);
+        cogoToast.error(response.data.message)
       })
 
     };

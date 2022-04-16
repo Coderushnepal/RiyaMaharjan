@@ -23,12 +23,20 @@ function Destination(props) {
     <div id="destination" >
       <div className='title'>
         <h1> {destination.destinationName}</h1>
-      </div>
-       
-        <div>
+      </div> 
+      <div className='about'>
+      <div>
           <img src={destination.images?.[1]} />
         </div>
-          <p>{destination.description}</p>
+
+        <div className='destination-desc'>
+          <h2>About {destination.destinationName}</h2>
+          <p>{destination.description}</p><br/>
+          <h2>Price : Rs.{destination.price}</h2>
+          <button>Book Now</button>
+        </div>
+      </div>
+        
     </div>
   )
 

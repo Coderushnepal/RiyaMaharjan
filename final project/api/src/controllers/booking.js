@@ -1,4 +1,5 @@
-import * as bookingService from '../services/booking.js'; // only for named Export
+import * as bookingService from "../services/booking.js"; // only for named Export
+import jwt from "jsonwebtoken";
 
 /**
  * Controller to get details of all bookings
@@ -21,9 +22,27 @@ export function getallBookings(req, res, next) {
  * @param {Object} res
  * @param {Function} next
  */
- export function postBookings(req, res, next) {
-  bookingService
-    .addBooking(req.body)
-    .then((data) => res.json(data))
-    .catch((err) => next(err));
+export function postBookings(req, res, next) {
+  try {
+    let token = req.headers["authorization"].split(" ")[1];
+
+    if (!token) {
+      return res.status(401).json({
+        message: "Authoriztion Credentials was not found",
+      });
+    }
+
+    var decoded = jwt.verify(token, process.env.TOKEN_SECRET);
+    console.log("Decoded:", decoded);
+
+    if (decoded) {
+      const reqData = { ...req.body, bookedBy: decoded.id };
+      return bookingService
+        .addBooking(reqData)
+        .then((data) => res.json(data))
+        .catch((err) => next(err));
+    }
+  } catch (e) {
+    return res.status(500).json({ message: e.message });
+  }
 }

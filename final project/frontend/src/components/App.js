@@ -14,6 +14,7 @@ import {
 } from 'react-router-dom';
 
 import * as routes from '../constants/routes';
+import ModifyDestination from './views/ModifyDestination';
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Route exact path={routes.REGISTER} component={Register} />
         <Route exact path={routes.LOGIN} component={Login} />
         <Route exact path={routes.BOOKINGS} component={Bookings} />
+        <Route exact path={routes.ALTERDESTINATIONS} component={ModifyDestination} />
         <Redirect to={routes.DESTINATIONS} />
       </Switch>
     </BrowserRouter>

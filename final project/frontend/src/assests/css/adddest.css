@@ -1,0 +1,17 @@
+.addDest {
+  display: block;
+  position: fixed;
+  bottom: 1rem;
+  right: 2rem;
+  z-index: 10;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #1900ff39;
+  padding: 1rem;
+}
+GrAddCircle {
+  height: 1.5rem;
+}
+GrAddCircle:hover {
+  color: white;
+}
