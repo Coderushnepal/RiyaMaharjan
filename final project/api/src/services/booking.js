@@ -7,10 +7,11 @@ import logger from "../utils/logger.js";
  * @returns {Object}
  *
  */
-export async function getBookings() {
+export async function getAllBookings(query) {
   logger.info("Fetching Bookings");
+  console.log(query);
 
-  const data = await new Booking().getAll();
+  const data = await new Booking().getAllBookings();
 
   return {
     data,

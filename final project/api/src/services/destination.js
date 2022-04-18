@@ -1,9 +1,9 @@
-import Boom from '@hapi/boom';
+import Boom from "@hapi/boom";
 
-import Destination from '../models/Destination.js';
-import DestinationImage from '../models/destinationImage.js';
+import Destination from "../models/Destination.js";
+import DestinationImage from "../models/destinationImage.js";
 // import Review from '../models/Review.js';
-import logger from '../utils/logger.js';
+import logger from "../utils/logger.js";
 
 /**
  * Get all destinations
@@ -14,17 +14,19 @@ import logger from '../utils/logger.js';
 export async function getAllDestinations(query) {
   console.log(query);
 
-  const priceFilter = query.price ? query.price.split(',').map(Number) : [];
-  const destinationFilter = query.destinationName ? query.destinationName.split(',') : [];
+  const priceFilter = query.price ? query.price.split(",").map(Number) : [];
+  const destinationFilter = query.destinationName
+    ? query.destinationName.split(",")
+    : [];
 
-  logger.info('Fetching a list of all destinations');
+  logger.info("Fetching a list of all destinations");
 
   const destinations = await new Destination().getAllDestinations();
 
   const paresdDestinations = destinations.map((destination) => ({
     ...destination,
-    images: destination.images ? destination.images.split(',') : [],
-    reviews: destination.reviews ? destination.reviews.split(',') : [],
+    images: destination.images ? destination.images.split(",") : [],
+    reviews: destination.reviews ? destination.reviews.split(",") : [],
   }));
 
   let filteredDestinations = paresdDestinations;
@@ -40,11 +42,11 @@ export async function getAllDestinations(query) {
       destinationFilter.includes(destination.destinationName)
     );
   }
-  console.log('Hi');
+  console.log("Hi");
 
   return {
     data: filteredDestinations,
-    message: 'List of destinations',
+    message: "List of destinations",
   };
 }
 
@@ -68,8 +70,8 @@ export async function getDestination(id) {
 
   const parsedDesatination = {
     ...destination,
-    images: destination.images ? destination.images.split(',') : [],
-    reviews: destination.reviews ? destination.reviews.split(',') : [],
+    images: destination.images ? destination.images.split(",") : [],
+    reviews: destination.reviews ? destination.reviews.split(",") : [],
   };
 
   return {
@@ -79,9 +81,9 @@ export async function getDestination(id) {
 }
 
 /**
- * Post destination 
+ * Post destination
  *
- * @param {object} 
+ * @param {object}
  * @returns {object}
  */
 export async function addDestination(params) {
@@ -98,18 +100,18 @@ export async function addDestination(params) {
   );
 
   if (existingData) {
-    logger.error('Data with same payload already exists');
+    logger.error("Data with same payload already exists");
 
-    throw new Boom.badRequest('Data with same payload already exists');
+    throw new Boom.badRequest("Data with same payload already exists");
   }
 
-  logger.info('Saving new destination data');
+  logger.info("Saving new destination data");
   const [destinationTableInsertData] = await new Destination().save(
     destinationTableInsertParams
   );
 
   if (params.images.length) {
-    logger.info('Creating insert data for destination_images table');
+    logger.info("Creating insert data for destination_images table");
     const destinationImagesInsertData = params.images.map((url) => ({
       destinationId: destinationTableInsertData.id,
       imageUrl: url,
@@ -139,14 +141,14 @@ export async function addDestination(params) {
   //   });
   // }
 
-  logger.info('Retriving the saved car details');
+  logger.info("Retriving the saved car details");
   const data = await new Destination().getDestinationDetails(
     destinationTableInsertData.id
   );
 
   return {
     data,
-    message: 'Record added successfully',
+    message: "Record added successfully",
   };
 }
 
@@ -171,7 +173,7 @@ export async function updateDestination(id, params) {
   logger.info(`Updating data of destination with id ${id}`);
   await new Destination().updateById(id, {
     destinationName: params.destinationName,
-    destination: params.description,
+    description: params.description,
     price: params.price,
   });
 
@@ -192,7 +194,7 @@ export async function updateDestination(id, params) {
 
   return {
     data: updatedData,
-    message: 'Record Updated Successfully',
+    message: "Record Updated Successfully",
   };
 }
 
@@ -220,6 +222,6 @@ export async function removeDestination(id) {
   await new Destination().removeById(id);
 
   return {
-    message: 'Record removed successfully',
+    message: "Record removed successfully",
   };
 }

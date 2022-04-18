@@ -79,6 +79,7 @@ router.get("/bookings", bookingController.getallBookings);
 router.post(
   "/bookings",
   validateBody(addBookingQuerySchema),
+  authenticate,
   bookingController.postBookings
 );
 export default router;

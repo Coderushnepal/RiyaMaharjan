@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import history from '../../utils/history';
+import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import {useDispatch, useSelector} from 'react-redux';
 import fetchDestinations from '../../actions/destinations';
@@ -13,11 +12,9 @@ function DestinationList() {
     useEffect(() => {
       dispatch(fetchDestinations);
     }, [dispatch]);
-  
-    // console.log(history);
 
     return (
-      <div id="recommend"> 
+      <div className="recommend" id="recommend"> 
       <div className='title'>
         <h1> Recommended Destinations</h1>
         </div>

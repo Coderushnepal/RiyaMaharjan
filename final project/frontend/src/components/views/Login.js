@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import axios from "axios";
-import cogoToast from 'cogo-toast';
+import cogoToast from "cogo-toast";
+import config from "../../config";
 
-import { useHistory } from "react-router-dom"
+import { useHistory } from "react-router-dom";
 
-const Login=() =>{
-
+const Login = () => {
   const [userEmailLog, setuserEmailLog] = useState("");
   const [userPasswordLog, setuserPasswordLog] = useState("");
 
-  const history = useHistory()
+  const history = useHistory();
 
   function onLogUsers(e) {
     e.preventDefault();
@@ -18,59 +18,62 @@ const Login=() =>{
       password: userPasswordLog,
     };
 
+    const url = `${config.apiUrl}${config.endpoints.login}`;
+
     axios
-      .post("http://127.0.01:1234/login", logData)
+      .post(url, logData)
       .then((response) => {
-        const {data} = response;
+        const { data } = response;
         console.log(data);
 
-        if (response.status===200) {
-          cogoToast.success("Logged in successfully")
+        if (response.status === 200) {
+          cogoToast.success("Logged in successfully");
           localStorage.setItem("Token", data.data.token);
-          console.log(localStorage.getItem('Token'))
+          console.log(localStorage.getItem("Token"));
           localStorage.setItem("User", JSON.stringify(data.data.user));
           history.push("/");
         }
-      }).catch((err)=>{
-        const {response} = err;
-        console.log(response.data);
-        cogoToast.error(response.data.message)
       })
-
-    };
-  return <div className='main'>
-      <h1 className='heading'>Log In</h1>
+      .catch((err) => {
+        const { response } = err;
+        console.log(response.data);
+        cogoToast.error(response.data.message);
+      });
+  }
+  return (
+    <div className="main">
+      <h1 className="heading">Log In</h1>
       <form onSubmit={onLogUsers}>
-          <div>
-            <input type='text'  
-              className='mainLoginInput' 
-              placeholder='&#61447; Email'  
-              onChange={(e)=>setuserEmailLog(e.target.value)}
-              value={userEmailLog}
-              name="email"
-              required/>{" "}
+        <div>
+          <input
+            type="text"
+            className="mainLoginInput"
+            placeholder="&#61447; Email"
+            onChange={(e) => setuserEmailLog(e.target.value)}
+            value={userEmailLog}
+            name="email"
+            required
+          />{" "}
         </div>
 
         <div>
-            <input type='password' 
-            className='mainLoginInput passwordInput ' 
-            placeholder='&#61475; Password' 
-            value={userPasswordLog} 
-            onChange={(e)=>setuserPasswordLog(e.target.value)}
+          <input
+            type="password"
+            className="mainLoginInput passwordInput "
+            placeholder="&#61475; Password"
+            value={userPasswordLog}
+            onChange={(e) => setuserPasswordLog(e.target.value)}
             name="password"
             required
-            />
+          />
         </div>
-       
+
         <div>
-          <button type='submit'>
-            Log In
-          </button>
+          <button type="submit">Log In</button>
         </div>
       </form>
-    </div>;
-} 
+    </div>
+  );
+};
 
 export default Login;
-
-

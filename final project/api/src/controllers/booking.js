@@ -10,7 +10,7 @@ import jwt from "jsonwebtoken";
  */
 export function getallBookings(req, res, next) {
   bookingService
-    .getBookings()
+    .getAllBookings(req.query)
     .then((data) => res.json(data))
     .catch((err) => next(err));
 }

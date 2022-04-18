@@ -7,6 +7,7 @@ import Hero from "../sections/Hero";
 import Home from "../sections/Home";
 import Navbar from "../sections/Navbar";
 import Recommended from "../sections/Recommended";
+import Bookings from "../sections/Bookings";
 
 function LandingPage() {
   const [user, setUser] = useState({});
@@ -20,6 +21,7 @@ function LandingPage() {
   };
 
   const fetchUser = () => {
+    // const url = `${config.apiUrl}${config.endpoints.login}`;
     axios.get("http://127.0.0.1:1234/profile", config).then(
       (res) => {
         localStorage.setItem("User", JSON.stringify(res.data));
@@ -42,6 +44,7 @@ function LandingPage() {
     <>
       <div>
         {user?.isAdmin && <AddDestination />}
+        {user?.isAdmin && <Bookings />}
         <Navbar />
         <Home />
         <Hero />

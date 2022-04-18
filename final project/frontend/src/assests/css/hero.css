@@ -20,6 +20,7 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  padding: 10px 0px;
 }
 .content .title {
   color: #ffffff;
@@ -52,6 +53,10 @@
   color: #03045e;
   margin-bottom: 0.5rem;
 }
+.formItem select {
+  border: none;
+}
+
 .formItem input {
   background-color: transparent;
   border: none;

@@ -1,11 +1,11 @@
 import React from 'react'
-import {GrAddCircle} from 'react-icons/gr'
+import {AiOutlineEdit} from 'react-icons/ai'
 import { Link  } from "react-router-dom";
 
 function AddDestination() {
   return (
     <div className='addDest'>
-        <button><Link to={`/alterdestinations`}><GrAddCircle/></Link></button>
+        <button><Link to={`/alterdestinations`}><AiOutlineEdit/></Link></button>
     </div>
   )
 }

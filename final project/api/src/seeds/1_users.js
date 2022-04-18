@@ -5,15 +5,15 @@
  * @returns {Promise}
  */
 export function seed(knex) {
-  return knex('users')
+  return knex("users")
     .del()
     .then(() => {
-      return knex('users').insert([
+      return knex("users").insert([
         {
-          name: 'Riya Maharjan',
-          email: 'riya@gmail.com',
+          name: "Riya Maharjan",
+          email: "riya@gmail.com",
           password:
-            '$2b$10$kAQJD.wTXZGMepThiWekZO8YcQZWNaX27SeYKPOQFOxAZihjPrTFG',
+            "$2b$10$kAQJD.wTXZGMepThiWekZO8YcQZWNaX27SeYKPOQFOxAZihjPrTFG",
         },
       ]);
     });
