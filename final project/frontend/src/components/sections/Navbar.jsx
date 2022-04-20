@@ -3,12 +3,12 @@ import logo from '../../assests/logo.jpeg';
 import {GiHamburgerMenu} from 'react-icons/gi';
 import {VscChromeClose} from 'react-icons/vsc';
 import { Link,useHistory  } from "react-router-dom";
-
+import {FaRegUserCircle} from 'react-icons/fa'
 
 export default function Navbar() {
     const [navbarState,setNavbarState]= useState(false);
     const Token = localStorage.getItem("Token");
-
+    const user = JSON.parse(localStorage.getItem("User"));
   
     const history = useHistory()
 
@@ -37,8 +37,12 @@ export default function Navbar() {
             <li><a href="#recommend">Places</a></li>
         </ul>
         <div className='user'>
-          {(Token)?
-          <button onClick={onLogout} >Log Out</button>:
+          {(Token)?<>
+          <button>
+          <Link to={`/userprofile`}> <FaRegUserCircle/></Link>
+          </button>
+            <button onClick={onLogout} >Log Out</button>
+          </>:
           <>
           <button><Link to={`/register`}>Register</Link></button>
           <button><Link to={`/login`}>Login</Link></button>

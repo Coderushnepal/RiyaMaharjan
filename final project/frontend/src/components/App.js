@@ -12,6 +12,7 @@ import * as routes from "../constants/routes";
 import ModifyDestination from "./views/ModifyDestination";
 import UpdateDestination from "./views/UpdateDestination";
 import Booking from "./views/Booking";
+import UserProfile from "./views/UserProfile";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
         <Route exact path={routes.REGISTER} component={Register} />
         <Route exact path={routes.LOGIN} component={Login} />
         <Route exact path={routes.BOOKINGS} component={Booking} />
+        <Route exact path={routes.USERPROFILE} component={UserProfile} />
         <Route
           exact
           path={routes.ALTERDESTINATIONS}

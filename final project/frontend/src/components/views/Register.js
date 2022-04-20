@@ -26,8 +26,8 @@ const Register = () => {
       .post(url, postData)
       .then((response) => {
         const { data } = response;
-        console.log(data);
-        console.log(data.message);
+        // console.log(data);
+        // console.log(data.message);
 
         if (response.status === 200) {
           history.push("/login");
@@ -35,7 +35,7 @@ const Register = () => {
       })
       .catch((err) => {
         const { response } = err;
-        console.log(response.data);
+        // console.log(response.data);
         cogoToast.error(response.data.message);
       });
   }

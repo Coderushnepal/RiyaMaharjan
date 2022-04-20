@@ -94,12 +94,14 @@ export async function getUsers(req) {
 }
 
 /**
- * Get list of users
+ * Get specific users by Id
  *
+ * @param {string} id
  * @returns {Object}
  *
  */
 export async function getUser(id) {
+  logger.info(`Fetching user with userId ${id}`);
   const data = await new User().getById(id);
 
   return data;

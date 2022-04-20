@@ -27,7 +27,7 @@ function DestinationList() {
 
   function fetchUser() {
     const user = JSON.parse(localStorage.getItem("User"));
-    console.log(user);
+    // console.log(user);
     if (!user || !user?.isAdmin) {
       history.replace("/login");
       cogoToast.warn("You are not authorized");
@@ -36,7 +36,7 @@ function DestinationList() {
 
   function onUpdate(e) {
     e.preventDefault();
-    console.log(id);
+    // console.log(id);
     let destinationData = {
       destinationName: destinationName,
       price: price,
@@ -52,14 +52,14 @@ function DestinationList() {
       },
     };
 
-    console.log(destinationData);
+    // console.log(destinationData);
     axios
       .put(url, destinationData, config)
       .then((response) => {
         const { data } = response;
-        console.log(data);
+        // console.log(data);
 
-        console.log(destinationData);
+        // console.log(destinationData);
         if (response.status === 200) {
           cogoToast.success("Updated record Successfully");
           history.push("/updatedestination");
@@ -67,7 +67,7 @@ function DestinationList() {
       })
       .catch((err) => {
         const { response } = err;
-        console.log(response.data);
+        // console.log(response.data);
         cogoToast.error(response.data.message);
       });
   }
@@ -92,7 +92,7 @@ function DestinationList() {
           <form onSubmit={onUpdate} id="update">
             <fieldset>
               <legend>Destination Details:</legend>
-              {console.log(id)}
+              {/* {console.log(id)} */}
               <div>
                 <input
                   type="text"

@@ -1,4 +1,4 @@
-import DBModel from './DBModel.js';
+import DBModel from "./DBModel.js";
 
 /**
  * Model for users table
@@ -7,7 +7,13 @@ import DBModel from './DBModel.js';
  */
 class User extends DBModel {
   constructor() {
-    super('users');
+    super("users");
+  }
+  async getUserDetails(userId) {
+    const [details] = await this.query(getuserDetailsQuery, {
+      userId,
+    });
+    return details || null;
   }
 }
 

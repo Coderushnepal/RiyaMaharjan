@@ -7,6 +7,7 @@ const Home = () => {
   // const [user, setUser] = useState({});
   const user= JSON.parse(localStorage.getItem("User"))
 
+  console.log(user);
   return user && Token ? (
     <h1 className="home-header">Hi! {user?.name}</h1>
   ) : (

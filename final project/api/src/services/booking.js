@@ -36,3 +36,21 @@ export async function addBooking(params) {
     message: "Record added Successfully",
   };
 }
+
+export async function getUserBooking(id) {
+  logger.info(`Fetching user with userId ${id}`);
+  const data = await new Booking().getUserDetails(id);
+  
+
+  if (!data) {
+    logger.error(`Cannot find user with booking userId ${id}`);
+
+    throw new Boom.notFound(`Cannot find booking of user with userId ${id}`);
+  }
+
+  console.log(data);
+  return {
+    data,
+    message: `Details of booking of userId ${id}`,
+  };
+}

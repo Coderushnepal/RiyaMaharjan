@@ -24,7 +24,7 @@ const Login = () => {
       .post(url, logData)
       .then((response) => {
         const { data } = response;
-        console.log(data);
+        // console.log(data);
 
         if (response.status === 200) {
           cogoToast.success("Logged in successfully");
@@ -36,7 +36,7 @@ const Login = () => {
       })
       .catch((err) => {
         const { response } = err;
-        console.log(response.data);
+        // console.log(response.data);
         cogoToast.error(response.data.message);
       });
   }

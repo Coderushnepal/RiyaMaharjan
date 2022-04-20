@@ -8,6 +8,7 @@ import Home from "../sections/Home";
 import Navbar from "../sections/Navbar";
 import Recommended from "../sections/Recommended";
 import Bookings from "../sections/Bookings";
+import configuration from "../../config";
 
 function LandingPage() {
   const [user, setUser] = useState({});
@@ -21,14 +22,14 @@ function LandingPage() {
   };
 
   const fetchUser = () => {
-    // const url = `${config.apiUrl}${config.endpoints.login}`;
-    axios.get("http://127.0.0.1:1234/profile", config).then(
+    const url = `${configuration.apiUrl}${configuration.endpoints.profile}`;
+    axios.get(url, config).then(
       (res) => {
         localStorage.setItem("User", JSON.stringify(res.data));
         setUser(res.data);
       },
       (err) => {
-        console.log(err);
+        // console.log(err);
       }
     );
   };
@@ -36,7 +37,7 @@ function LandingPage() {
   useEffect(() => {
     if (Token) {
       fetchUser();
-      console.log("Fetch User Called");
+      // console.log("Fetch User Called");
     }
   }, [Token]);
 

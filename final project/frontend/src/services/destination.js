@@ -14,7 +14,7 @@ export const fetchDestinationsById = async (id) => {
 
   const { data } = await axios.get(interpolate(url, { id }));
 
-  console.log(data.data);
+  // console.log(data.data);
   return data.data;
 };
 
@@ -25,7 +25,7 @@ export const postDestinations = async (postData) => {
 
     return data;
   } catch (err) {
-    console.log(err);
+    // console.log(err);
     return err.response.data.message;
   }
 };
@@ -34,7 +34,7 @@ export const updateDestinations = async (postData, id) => {
   try {
     const url = `${config.apiUrl}${config.endpoints.destination}`;
     const { data } = await axios.put(interpolate(url, { id }), postData);
-    console.log("Updated", data);
+    // console.log("Updated", data);
     return data;
   } catch (err) {
     return err.response.data.message;

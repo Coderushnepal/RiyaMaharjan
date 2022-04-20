@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom"
 import cogoToast from 'cogo-toast';
 import { useDispatch, useSelector } from "react-redux";
 import fetchDestinations from '../../actions/destinations';
-
+import configuration from "../../config";
 
 export default function Hero() {
     const [bookstartDate,setstartDate]=useState("")
@@ -32,12 +32,13 @@ export default function Hero() {
             endDate: bookendDate,
             destinationId: bookdestinationId
         }
-  
-        axios.post("http://127.0.01:1234/bookings",postBooking,config)
+        
+        const url = `${configuration.apiUrl}${configuration.endpoints.bookings}`;
+        axios.post(url,postBooking,config)
                 .then((response)=>{
                     const {data} = response;
-                    console.log(data);
-                    console.log(data.message);
+                    // console.log(data);
+                    // console.log(data.message);
             
                     if (response.status===200) {
                       cogoToast.success('Booking Successfull')
@@ -46,7 +47,7 @@ export default function Hero() {
                 })
                 .catch((err)=>{
                     const {response} = err;
-                    console.log(response.data);
+                    // console.log(response.data);
                     cogoToast.error(response.data.message)
                    })
     }
@@ -54,7 +55,7 @@ export default function Hero() {
         dispatch(fetchDestinations);
       }, []);
 
-      console.log(destinations)
+    //   console.log(destinations)
     return (
         <>
          <div id='hero'>
@@ -85,16 +86,14 @@ export default function Hero() {
                 <div className="formItem">
                     <label htmlFor="">Check-in</label>
                     <input type='date' onChange={(e)=>{
-                        
-                        setstartDate(new Date(e.target.value).toISOString())
-                        
+                        setstartDate(e.target.value) 
                     }} />
                 </div>
 
                 <div className="formItem">
                     <label htmlFor="">Check-out</label>
                     <input type='date' onChange={(e)=>{ 
-                        setendDate(new Date(e.target.value).toISOString())
+                        setendDate(e.target.value)
      
                     }}/>
                 </div>

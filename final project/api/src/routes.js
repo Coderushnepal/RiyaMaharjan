@@ -75,6 +75,7 @@ router.get("/profile", userController.getUser);
 
 router.post("/login", validateBody(loginSchema), userController.login);
 
+router.get("/userbooking", bookingController.getuserbooking);
 router.get("/bookings", bookingController.getallBookings);
 router.post(
   "/bookings",

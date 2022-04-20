@@ -23,7 +23,7 @@ function DestinationList() {
 
   function fetchUser() {
     const user = JSON.parse(localStorage.getItem("User"));
-    console.log(user);
+    // console.log(user);
     if (!user || !user?.isAdmin) {
       history.replace("/login");
       cogoToast.warn("You are not authorized");
@@ -43,7 +43,7 @@ function DestinationList() {
       .post(url, destinationData)
       .then((response) => {
         const { data } = response;
-        console.log(data);
+        // console.log(data);
 
         if (response.status === 200) {
           cogoToast.success("Added record Successfully");
@@ -53,7 +53,7 @@ function DestinationList() {
       })
       .catch((err) => {
         const { response } = err;
-        console.log(response.data);
+        // console.log(response.data);
         cogoToast.error(response.data.message);
       });
 
@@ -66,7 +66,7 @@ function DestinationList() {
       .delete(interpolate(url, { id }))
       .then((response) => {
         const { data } = response;
-        console.log(data);
+        // console.log(data);
 
         if (response.status === 200) {
           cogoToast.success("Deleted record Successfully");
@@ -75,7 +75,7 @@ function DestinationList() {
       })
       .catch((err) => {
         const { response } = err;
-        console.log(response.data);
+        // console.log(response.data);
         cogoToast.error(response.data.message);
       });
   }

@@ -5,15 +5,15 @@
  * @returns { Promise<void> }
  */
 export function up(knex) {
-  return knex.schema.createTable('bookings', (table) => {
-    table.increments('id').primary().unsigned();
-    table.integer('booked_by').references('id').inTable('users');
-    table.date('start_date').notNull();
-    table.date('end_date').notNull();
+  return knex.schema.createTable("bookings", (table) => {
+    table.increments("id").primary().unsigned();
+    table.integer("booked_by").references("id").inTable("users");
+    table.date("start_date").notNull();
+    table.date("end_date").notNull();
     table
-      .integer('destination_id')
-      .references('id')
-      .inTable('destination')
+      .integer("destination_id")
+      .references("id")
+      .inTable("destination")
       .notNull();
   });
 }
@@ -25,5 +25,5 @@ export function up(knex) {
  * @returns { Promise<void> }
  */
 export function down(knex) {
-  return knex.schema.dropTable('bookings');
+  return knex.schema.dropTable("bookings");
 }

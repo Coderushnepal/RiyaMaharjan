@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 
 function Destination(props) {
   const [destination, setDestination] = useState({});
-  console.log(props);
+  // console.log(props);
   const { id } = props.match.params;
 
   const history = useHistory();
@@ -16,7 +16,7 @@ function Destination(props) {
       const destination = await destinationService.fetchDestinationsById(id);
 
       setDestination(destination);
-      console.log(destination);
+      // console.log(destination);
     };
     fetchDestinations();
   }, []);

@@ -1,8 +1,8 @@
-import Knex from 'knex';
-import camelize from 'camelize';
-import snakeize from 'snakeize';
+import Knex from "knex";
+import camelize from "camelize";
+import snakeize from "snakeize";
 
-import connection from '../knexfile.js';
+import connection from "../knexfile.js";
 
 /**
  * Base Model to use for all tables
@@ -16,22 +16,22 @@ class DBModel {
   }
 
   async getAll() {
-    const data = await this.connection(this.table).select('*');
+    const data = await this.connection(this.table).select("*");
 
     return camelize(data);
   }
 
   async getById(id) {
     const [data] = await this.connection(this.table)
-      .select('*')
-      .where('id', id);
+      .select("*")
+      .where("id", id);
 
     return data ? camelize(data) : null;
   }
 
   async findByParams(params) {
     const [data] = await this.connection(this.table)
-      .select('*')
+      .select("*")
       .where(snakeize(params));
 
     return data ? camelize(data) : null;
@@ -40,7 +40,7 @@ class DBModel {
   async save(data) {
     const result = await this.connection(this.table)
       .insert(snakeize(data))
-      .returning('*');
+      .returning("*");
 
     return camelize(result);
   }
@@ -49,7 +49,7 @@ class DBModel {
     const result = await this.connection(this.table)
       .update(snakeize(data))
       .where({ id })
-      .returning('*');
+      .returning("*");
 
     return camelize(result);
   }
