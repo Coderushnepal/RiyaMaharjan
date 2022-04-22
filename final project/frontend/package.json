@@ -16,6 +16,7 @@
     "react-router": "^6.3.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "5.0.0",
+    "react-table": "^7.7.0",
     "redux-thunk": "^2.4.1",
     "scrollreveal": "^4.0.9",
     "web-vitals": "^2.1.4"

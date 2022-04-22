@@ -3,7 +3,7 @@
 #destination {
   max-width: 1440px;
   min-width: 570px;
-  margin: 0px auto;
+  margin: 2rem auto;
 }
 #destination .about {
   display: flex;

@@ -8,11 +8,16 @@ import { useHistory } from "react-router-dom";
 import * as destinationService from "../../services/destination";
 import interpolate from "pinterpolate";
 import config from "../../config";
+import { AiFillHome } from "react-icons/ai";
 
 function DestinationList() {
   const dispatch = useDispatch();
   const destinations = useSelector((store) => store.destination.destinations);
   const isLoading = useSelector((store) => store.destination.isLoading);
+
+  function jumpToHome(e) {
+    history.push("/");
+  }
 
   const history = useHistory();
 
@@ -56,7 +61,6 @@ function DestinationList() {
         // console.log(response.data);
         cogoToast.error(response.data.message);
       });
-
   }
 
   function onDelete(id) {
@@ -96,6 +100,9 @@ function DestinationList() {
 
   return (
     <div className="recommend modify">
+      <button className="landing-page " onClick={jumpToHome}>
+        <AiFillHome />
+      </button>
       <div className="add-destination">
         <div className="title">
           <h1> Add Destination</h1>
@@ -174,7 +181,7 @@ function DestinationList() {
       </div>
 
       <div className="title">
-        <h1> Available Destinations</h1>
+        <h1> Delete Destinations</h1>
       </div>
       {isLoading ? (
         <h1>Loading...</h1>
@@ -205,6 +212,12 @@ function DestinationList() {
           ))}
         </div>
       )}
+      <div className="title">
+        <h1> Update Destinations</h1>
+        <button>
+          <Link to={`/updatedestination`}>Update</Link>
+        </button>
+      </div>
     </div>
   );
 }

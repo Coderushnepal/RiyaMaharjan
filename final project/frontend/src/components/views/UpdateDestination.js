@@ -7,6 +7,7 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 import configure from "../../config";
 import { cleanObj } from "../../services/helper";
+import { AiFillHome } from "react-icons/ai";
 
 function DestinationList() {
   const dispatch = useDispatch();
@@ -24,6 +25,10 @@ function DestinationList() {
     id: "",
   });
   const { destinationName, price, description, images, id } = values;
+
+  function jumpToHome(e) {
+    history.push("/");
+  }
 
   function fetchUser() {
     const user = JSON.parse(localStorage.getItem("User"));
@@ -86,6 +91,9 @@ function DestinationList() {
 
   return (
     <div className="recommend modify">
+      <button className="landing-page " onClick={jumpToHome}>
+        <AiFillHome />
+      </button>
       <div className="add-destination">
         <div className="title">
           <h1> Update Destination {destinationName}</h1>

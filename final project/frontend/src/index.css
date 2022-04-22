@@ -18,6 +18,11 @@ body {
     sans-serif;
 }
 
+.landing-page {
+  position: fixed;
+  margin-left: 1rem !important;
+}
+
 ::-webkit-scrollbar {
   width: 0.6rem;
   background-color: #14213d;

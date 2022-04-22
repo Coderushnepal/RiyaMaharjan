@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import * as destinationService from "../../services/destination";
 import "../../assests/css/destination.css";
 import { useHistory } from "react-router-dom";
+import { AiFillHome } from "react-icons/ai";
 
 function Destination(props) {
   const [destination, setDestination] = useState({});
@@ -26,8 +27,15 @@ function Destination(props) {
     history.push("/destinations#hero");
   }
 
+  function jumpToHome(e) {
+    history.push("/");
+  }
+
   return (
     <div id="destination">
+      <button className="landing-page " onClick={jumpToHome}>
+        <AiFillHome />
+      </button>
       <div className="title">
         <h1> {destination.destinationName}</h1>
       </div>

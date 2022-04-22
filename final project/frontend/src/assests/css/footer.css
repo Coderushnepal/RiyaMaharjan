@@ -4,6 +4,7 @@
   justify-content: space-evenly;
   padding: 2.5rem;
   border-radius: 0.5rem;
+  margin: 1rem 2rem;
 }
 .footer ul {
   display: flex;

@@ -6,7 +6,7 @@
   z-index: 10;
   cursor: pointer;
   border-radius: 50%;
-  background-color: #1900ff39;
+  /* background-color: #1900ff39; */
   padding: 1rem;
 }
 .addDest button a svg {

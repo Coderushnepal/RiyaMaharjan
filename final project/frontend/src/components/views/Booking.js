@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import fetchBookings from "../../actions/bookings";
 import { useHistory } from "react-router-dom";
 import { getProfile, getUserBooking } from "../../actions/user";
+import cogoToast from "cogo-toast";
+import { AiFillHome } from "react-icons/ai";
 
 function BookingList() {
   const dispatch = useDispatch();
@@ -14,13 +16,19 @@ function BookingList() {
 
   useEffect(() => {
     dispatch(fetchBookings);
-  
   }, [dispatch]);
 
   const history = useHistory();
 
+  function jumpToHome(e) {
+    history.push("/");
+  }
+
   return user.isAdmin && Token ? (
     <div className="recommend">
+      <button className="landing-page " onClick={jumpToHome}>
+        <AiFillHome />
+      </button>
       <div className="title">
         <h1> Bookings</h1>
       </div>
@@ -59,7 +67,10 @@ function BookingList() {
       )}{" "}
     </div>
   ) : (
-    <></>
+    <>
+      {history.replace("/login")}
+      {cogoToast.warn("You are not authorized")}
+    </>
   );
 }
 
