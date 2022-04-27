@@ -10,5 +10,5 @@ FROM bookings b
 LEFT JOIN destination d ON b.destination_id = d.id
 WHERE b.booked_by=:bookedBy
 group by b.id
-order by b.id;
+order by b.id DESC;
 `;

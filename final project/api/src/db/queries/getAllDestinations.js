@@ -10,5 +10,5 @@ GROUP BY d.id,
        d.destination_name,
        d.price,
        d.description
-order by d.id;
+order by d.id DESC;
 `;
