@@ -1,0 +1,22 @@
+.swiper-image {
+  width: 100% !important;
+}
+.swiper {
+  /* max-width: 1000px; */
+}
+.swiper-image img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  margin: 0px !important;
+}
+.swiper-block {
+  width: 100%;
+}
+.swiper-slide {
+  width: 100% !important;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: #ffffff !important;
+}
