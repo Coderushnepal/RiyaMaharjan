@@ -34,7 +34,7 @@ export function postBookings(req, res, next) {
     }
 
     var decoded = jwt.verify(token, process.env.TOKEN_SECRET);
-    console.log("Decoded:", decoded);
+    // console.log("Decoded:", decoded);
 
     const { startDate, endDate } = req.body;
 
@@ -45,7 +45,7 @@ export function postBookings(req, res, next) {
         endDate: new Date(endDate),
         bookedBy: decoded.id,
       };
-      console.log(reqData);
+      // console.log(reqData);
       return bookingService
         .addBooking(reqData)
         .then((data) => res.json(data))
@@ -65,7 +65,6 @@ export function postBookings(req, res, next) {
  */
 export function getuserbooking(req, res, next) {
   try {
-    console.log("hi");
     let token = req.headers["authorization"].split(" ")[1];
 
     logger.info(token);
@@ -77,8 +76,7 @@ export function getuserbooking(req, res, next) {
     }
 
     var decoded = jwt.verify(token, process.env.TOKEN_SECRET);
-    console.log("Decoded:", decoded);
-
+    
     if (decoded) {
       return bookingService
         .getUserBooking(decoded.id)

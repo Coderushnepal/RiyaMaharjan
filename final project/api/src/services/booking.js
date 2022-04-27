@@ -9,7 +9,6 @@ import logger from "../utils/logger.js";
  */
 export async function getAllBookings(query) {
   logger.info("Fetching Bookings");
-  console.log(query);
 
   const data = await new Booking().getAllBookings();
 
@@ -48,7 +47,6 @@ export async function getUserBooking(id) {
     throw new Boom.notFound(`Cannot find booking of user with userId ${id}`);
   }
 
-  console.log(data);
   return {
     data,
     message: `Details of booking of userId ${id}`,

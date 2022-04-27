@@ -64,7 +64,6 @@ export function getUser(req, res, next) {
     }
 
     var decoded = jwt.verify(token, process.env.TOKEN_SECRET);
-    console.log("Decoded:", decoded);
 
     if (decoded) {
       return userService

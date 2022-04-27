@@ -12,7 +12,6 @@ import logger from "../utils/logger.js";
  * @return {Object}
  * */
 export async function getAllDestinations(query) {
-  console.log(query);
 
   const priceFilter = query.price ? query.price.split(",").map(Number) : [];
   const destinationFilter = query.destinationName
@@ -42,7 +41,6 @@ export async function getAllDestinations(query) {
       destinationFilter.includes(destination.destinationName)
     );
   }
-  console.log("Hi");
 
   return {
     data: filteredDestinations,
