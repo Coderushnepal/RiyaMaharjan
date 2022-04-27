@@ -10,9 +10,7 @@ function BookingList() {
   const dispatch = useDispatch();
   const bookings = useSelector((store) => store.booking.bookings);
   const isLoading = useSelector((store) => store.destination.isLoading);
-
-  const Token = localStorage.getItem("Token");
-  const user = JSON.parse(localStorage.getItem("User"));
+  const { profile } = useSelector((state) => state.user);
 
   useEffect(() => {
     dispatch(fetchBookings);
@@ -24,7 +22,7 @@ function BookingList() {
     history.push("/");
   }
 
-  return user.isAdmin && Token ? (
+  return profile?.isAdmin ? (
     <div className="recommend">
       <button className="landing-page " onClick={jumpToHome}>
         <AiFillHome />
@@ -40,7 +38,7 @@ function BookingList() {
             <thead>
               <tr>
                 <th>S.N.</th>
-                <th>Booking Id</th>
+                {/* <th>Booking Id</th> */}
                 <th>Booked By</th>
                 <th>Destination</th>
                 <th>Price</th>
@@ -53,7 +51,7 @@ function BookingList() {
               {bookings.map((booking, index) => (
                 <tr key={booking.id}>
                   <td>{index + 1}</td>
-                  <td>{booking.id}</td>
+                  {/* <td>{booking.id}</td> */}
                   <td>{booking.name}</td>
                   <td>{booking.destinationName}</td>
                   <td>{booking.price}</td>

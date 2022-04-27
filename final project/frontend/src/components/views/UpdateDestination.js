@@ -8,11 +8,19 @@ import { useHistory } from "react-router-dom";
 import configure from "../../config";
 import { cleanObj } from "../../services/helper";
 import { AiFillHome } from "react-icons/ai";
+import { getProfile, getUserBooking } from "../../actions/user";
 
 function DestinationList() {
   const dispatch = useDispatch();
   const destinations = useSelector((store) => store.destination.destinations);
   const isLoading = useSelector((store) => store.destination.isLoading);
+
+  const { profile, bookings } = useSelector((state) => state.user);
+
+  useEffect(() => {
+    dispatch(getProfile());
+    dispatch(getUserBooking());
+  }, []);
 
   const history = useHistory();
 
@@ -31,9 +39,7 @@ function DestinationList() {
   }
 
   function fetchUser() {
-    const user = JSON.parse(localStorage.getItem("User"));
-    // console.log(user);
-    if (!user || !user?.isAdmin) {
+    if (!profile || !profile?.isAdmin) {
       history.replace("/login");
       cogoToast.warn("You are not authorized");
     }
@@ -67,7 +73,7 @@ function DestinationList() {
         // console.log(destinationData);
         if (response.status === 200) {
           cogoToast.success("Updated record Successfully");
-          history.push("/updatedestination");
+          history.push("/");
         }
       })
       .catch((err) => {

@@ -4,10 +4,10 @@ import * as destinationService from "../../services/destination";
 import "../../assests/css/destination.css";
 import { useHistory } from "react-router-dom";
 import { AiFillHome } from "react-icons/ai";
+import ImageGallery from "../sections/ImageGallery";
 
 function Destination(props) {
   const [destination, setDestination] = useState({});
-  // console.log(props);
   const { id } = props.match.params;
 
   const history = useHistory();
@@ -17,7 +17,6 @@ function Destination(props) {
       const destination = await destinationService.fetchDestinationsById(id);
 
       setDestination(destination);
-      // console.log(destination);
     };
     fetchDestinations();
   }, []);
@@ -39,11 +38,10 @@ function Destination(props) {
       <div className="title">
         <h1> {destination.destinationName}</h1>
       </div>
-      <div className="about">
-        <div>
-          <img src={destination.images?.[1]} />
-        </div>
 
+      <ImageGallery name={id} />
+
+      <div className="about">
         <div className="destination-desc">
           <h2>About {destination.destinationName}</h2>
           <p>{destination.description}</p>

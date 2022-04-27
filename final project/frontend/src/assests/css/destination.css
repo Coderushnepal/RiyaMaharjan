@@ -5,39 +5,15 @@
   min-width: 570px;
   margin: 2rem auto;
 }
-#destination .about {
-  display: flex;
-  flex-direction: column;
-}
-
-#destination img {
-  width: fit-content;
-  margin: 60px auto;
-  border-radius: 8px;
-  background-color: white;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 1, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
 #destination .destination-desc-blocks h2 {
   margin-left: 30px;
 }
-#destination div {
-  margin: 0px auto;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-}
-p {
-  font-family: Arial, Helvetica, sans-serif;
-  /* font-family: 'Roboto'; */
+#destination p {
   font-size: 18px;
   line-height: 1.6;
   letter-spacing: 0.5;
   padding: 0px 30px;
   text-align: justify;
-}
-.about {
-  display: flex;
-  justify-content: space-evenly;
 }
 #destination .destination-desc {
   display: flex;

@@ -30,7 +30,6 @@ const Login = () => {
           cogoToast.success("Logged in successfully");
           localStorage.setItem("Token", data.data.token);
           console.log(localStorage.getItem("Token"));
-          localStorage.setItem("User", JSON.stringify(data.data.user));
           history.push("/");
         }
       })

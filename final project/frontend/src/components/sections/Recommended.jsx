@@ -8,10 +8,9 @@ function DestinationList() {
   const destinations= useSelector(store=>store.destination.destinations);
   const isLoading=useSelector((store)=>store.destination.isLoading)
 
-  dispatch({type:''})
     useEffect(() => {
       dispatch(fetchDestinations);
-    }, [dispatch]);
+    }, []);
 
     return (
       <div className="recommend" id="recommend"> 
@@ -24,14 +23,16 @@ function DestinationList() {
           <div className='destinations'>
           {destinations.map((destination) => (
             <div key={destination.id} className='destination'>
-              <img
-                src={destination.images[0]}
+             <div className='image-wrapper'>
+               <img
+                src={destination?.images[0]}
                 alt={destination.destinationName}
               />
+               </div> 
               <a href={`/destinations/${destination.id}`}>
               <h3>{destination.destinationName}</h3>
               </a>
-              <p>{destination.description?.slice(0, 100)}...<Link to={`/destinations/${destination.id}`}>See more</Link></p>
+              <p>{destination.description?.slice(0, 200)}...<Link to={`/destinations/${destination.id}`}>See more</Link></p>
               <h4>Rs.{destination.price}</h4>
             </div>
           ))}

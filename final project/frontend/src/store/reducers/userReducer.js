@@ -5,6 +5,7 @@ import {
   FETCH_USERBOOKING_FULFILLED,
   FETCH_USERBOOKING_PENDING,
   FETCH_USERBOOKING_REJECTED,
+  CLEAR_USER,
 } from "../../actions/user";
 
 const INITIAL_STATE = {
@@ -14,7 +15,7 @@ const INITIAL_STATE = {
 };
 
 function userReducer(state = INITIAL_STATE, action) {
-  // console.log(action);
+
   switch (action.type) {
     case FETCH_USER_PENDING:
       return { ...state };
@@ -33,6 +34,9 @@ function userReducer(state = INITIAL_STATE, action) {
 
     case FETCH_USERBOOKING_REJECTED:
       return { ...state, bookings: [], isLoading: false };
+
+    case CLEAR_USER:
+      return { ...state, profile: {}, bookings: [] };
 
     default:
       return state;

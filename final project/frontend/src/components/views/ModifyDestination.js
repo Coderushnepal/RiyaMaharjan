@@ -8,12 +8,18 @@ import { useHistory } from "react-router-dom";
 import * as destinationService from "../../services/destination";
 import interpolate from "pinterpolate";
 import config from "../../config";
+import { getProfile, getUserBooking } from "../../actions/user";
 import { AiFillHome } from "react-icons/ai";
 
 function DestinationList() {
   const dispatch = useDispatch();
   const destinations = useSelector((store) => store.destination.destinations);
-  const isLoading = useSelector((store) => store.destination.isLoading);
+  const { profile, bookings, isLoading } = useSelector((state) => state.user);
+
+  useEffect(() => {
+    dispatch(getProfile());
+    dispatch(getUserBooking());
+  }, []);
 
   function jumpToHome(e) {
     history.push("/");
@@ -27,9 +33,7 @@ function DestinationList() {
   const [images, setimages] = useState([""]);
 
   function fetchUser() {
-    const user = JSON.parse(localStorage.getItem("User"));
-    // console.log(user);
-    if (!user || !user?.isAdmin) {
+    if (!profile || !profile?.isAdmin) {
       history.replace("/login");
       cogoToast.warn("You are not authorized");
     }
@@ -52,7 +56,7 @@ function DestinationList() {
 
         if (response.status === 200) {
           cogoToast.success("Added record Successfully");
-          history.push("/alterdestinations");
+          history.push("/");
           dispatch(fetchDestinations);
         }
       })
@@ -75,6 +79,7 @@ function DestinationList() {
         if (response.status === 200) {
           cogoToast.success("Deleted record Successfully");
           dispatch(fetchDestinations);
+          history.push("/");
         }
       })
       .catch((err) => {
@@ -153,9 +158,7 @@ function DestinationList() {
                       className="mainLoginInput"
                       placeholder={`Image ${index + 1}`}
                       onChange={(e) => {
-                        if (e.target.value) {
-                          addImage(index, e.target.value);
-                        }
+                        addImage(index, e.target.value);
                       }}
                       value={image}
                       required
@@ -194,11 +197,11 @@ function DestinationList() {
                 src={destination.images[0]}
                 alt={destination.destinationName}
               />
-              <span>
+              {/* <span>
                 <button>
                   <Link to={`/updatedestination`}>Update</Link>
                 </button>{" "}
-              </span>
+              </span> */}
               <span>
                 <button
                   onClick={() => {

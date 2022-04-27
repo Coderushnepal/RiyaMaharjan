@@ -9,45 +9,26 @@ import Navbar from "../sections/Navbar";
 import Recommended from "../sections/Recommended";
 import Bookings from "../sections/Bookings";
 import configuration from "../../config";
+import { getProfile } from "../../actions/user";
+import { useDispatch, useSelector } from "react-redux";
 
 function LandingPage() {
-  const [user, setUser] = useState({});
+  const { profile, isLoading } = useSelector((state) => state.user);
 
-  const Token = localStorage.getItem("Token");
-
-  const config = {
-    headers: {
-      Authorization: "Bearer " + Token,
-    },
-  };
-
-  const fetchUser = () => {
-    const url = `${configuration.apiUrl}${configuration.endpoints.profile}`;
-    axios.get(url, config).then(
-      (res) => {
-        localStorage.setItem("User", JSON.stringify(res.data));
-        setUser(res.data);
-      },
-      (err) => {
-        // console.log(err);
-      }
-    );
-  };
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    if (Token) {
-      fetchUser();
-      // console.log("Fetch User Called");
-    }
-  }, [Token]);
+    dispatch(getProfile());
+    // console.log("Fetch User Called");
+  }, []);
 
   return (
     <>
       <div>
-        {user?.isAdmin && <AddDestination />}
-        {user?.isAdmin && <Bookings />}
+        {profile?.isAdmin && <AddDestination />}
+        {profile?.isAdmin && <Bookings />}
         <Navbar />
-        <Home />
+        {/* <Home /> */}
         <Hero />
         <Recommended />
         <Footer />

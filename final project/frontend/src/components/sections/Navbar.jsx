@@ -3,17 +3,22 @@ import logo from '../../assests/logo.jpeg';
 import {GiHamburgerMenu} from 'react-icons/gi';
 import {VscChromeClose} from 'react-icons/vsc';
 import { Link,useHistory  } from "react-router-dom";
-import {FaRegUserCircle} from 'react-icons/fa'
+import {FaRegUserCircle} from 'react-icons/fa';
+import { useDispatch , useSelector} from 'react-redux';
+import { CLEAR_USER } from '../../actions/user';
 
 export default function Navbar() {
     const [navbarState,setNavbarState]= useState(false);
+    const { profile, isLoading } = useSelector((state) => state.user);
+
     const Token = localStorage.getItem("Token");
-    const user = JSON.parse(localStorage.getItem("User"));
   
-    const history = useHistory()
+    const history = useHistory();
+
+    const dispatch = useDispatch();
 
     function onLogout(e){
-        console.log(Token);
+        dispatch({type: CLEAR_USER})
         localStorage.clear();
         history.push("/");
     }
@@ -38,6 +43,7 @@ export default function Navbar() {
         </ul>
         <div className='user'>
           {(Token)?<>
+          <p>{profile?.name}</p>
           <button>
           <Link to={`/userprofile`}> <FaRegUserCircle/></Link>
           </button>

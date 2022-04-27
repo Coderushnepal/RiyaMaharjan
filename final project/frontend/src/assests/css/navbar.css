@@ -98,6 +98,12 @@
   color: #023e8a;
   font-weight: 900;
 }
+.user p {
+  padding-top: 16px;
+  margin-right: 1rem;
+  font-weight: 300;
+  font-size: 16px;
+}
 @media screen and (max-width: 768px) {
   .responsenav {
     display: flex;
