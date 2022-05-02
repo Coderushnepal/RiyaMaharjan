@@ -1,10 +1,10 @@
-import dotenv from 'dotenv';
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
+import dotenv from "dotenv";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-dotenv.config({ path: __dirname + '/../.env' });
+dotenv.config({ path: __dirname + "/../.env" });
 
 const configuration = {
   client: process.env.DB_CLIENT,
@@ -15,14 +15,16 @@ const configuration = {
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
   },
+  pool: { min: 0, max: 7 },
+  acquireConnectionTimeout: 10000,
   migrations: {
-    tableName: 'migrations',
-    directory: './migrations',
-    stub: './stub/migration.stub',
+    tableName: "migrations",
+    directory: "./migrations",
+    stub: "./stub/migration.stub",
   },
   seeds: {
-    directory: './seeds',
-    stub: './stub/seed.stub',
+    directory: "./seeds",
+    stub: "./stub/seed.stub",
   },
 };
 
