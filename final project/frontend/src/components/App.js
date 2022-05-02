@@ -13,6 +13,10 @@ import ModifyDestination from "./views/ModifyDestination";
 import UpdateDestination from "./views/UpdateDestination";
 import Booking from "./views/Booking";
 import UserProfile from "./views/UserProfile";
+import DestinationCRUD from "./views/DestinationCRUD";
+import AddDestinations from "./views/AddDestination";
+import DeleteDestination from "./views/DeleteDestination";
+import DisplayDestination from "./views/DisplayDestination";
 
 export default function App() {
   return (
@@ -33,6 +37,22 @@ export default function App() {
           exact
           path={routes.UPDATEDESTINATION}
           component={UpdateDestination}
+        />
+        <Route
+          exact
+          path={routes.DESTINATIONCRUD}
+          component={DestinationCRUD}
+        />
+        <Route exact path={routes.ADDDESTINATION} component={AddDestinations} />
+        <Route
+          exact
+          path={routes.DELETEDESTIANTION}
+          component={DeleteDestination}
+        />
+        <Route
+          exact
+          path={routes.DISPLAYDESTINATION}
+          component={DisplayDestination}
         />
         <Redirect to={routes.DESTINATIONS} />
       </Switch>

@@ -6,3 +6,7 @@ export const REGISTER = "/register";
 export const BOOKINGS = "/bookings";
 export const UPDATEDESTINATION = "/updatedestination";
 export const USERPROFILE = "/userprofile";
+export const DESTINATIONCRUD = "/destinationcrud";
+export const ADDDESTINATION = "/adddestinations";
+export const DELETEDESTIANTION = "/deletedestinations";
+export const DISPLAYDESTINATION="/displaydestinations"
