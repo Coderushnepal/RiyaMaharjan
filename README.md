@@ -40,11 +40,19 @@ All assignments have been listed below with its related topics
 - Assignment 10 - Ball Bounce | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/JavaScript/Assignment-6) | [Demo](https://coderushnepal.github.io/RiyaMaharjan/JavaScript/Assignment-6/)
   
 - Assignment 11 - Multiple Ball Bounce | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/JavaScript/Assignment-7) | [Demo](https://coderushnepal.github.io/RiyaMaharjan/JavaScript/Assignment-7/)
-   
+
 - Assignment 12 - Expense Tracker | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/JavaScript/Assignment-8) | [Demo](https://coderushnepal.github.io/RiyaMaharjan/JavaScript/Assignment-8/)
   
 - Assignment 13 - Infinite Blog | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/JavaScript/Assignment-9) | [Demo](https://coderushnepal.github.io/RiyaMaharjan/JavaScript/Assignment-9/)
 
-## Node.JS Assignment
+## NodeJS Assignment
 
-* Assignment 1 - HTTP server and File Server | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/NodeJs/Assignment-1) 
+- Assignment 1 - HTTP server and File Server | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/NodeJs/Assignment-1)
+
+- Assignment 2 - Travel API | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/NodeJs/Assignment-2)
+
+## React Assignment
+
+- Assignment 1 - React Class | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/React/hello-world)
+
+- Assignment 2 - Beer Bank | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/React/beer-bank)
