@@ -62,4 +62,4 @@ All assignments have been listed below with its related topics
 
 ## Final Assignment
 
--Travel Nepal | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/final%20project)
+- Travel Nepal | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/final%20project)
