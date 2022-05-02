@@ -1,6 +1,9 @@
 # Code Like Her Fellowship
+
 The link below(index) directs to the index page containing all my assignments in this fellowship.
+
 ## **[Index](https://coderushnepal.github.io/RiyaMaharjan/index.html)**
+
 All assignments have been listed below with its related topics
 
 ## Design Assignment
@@ -56,3 +59,7 @@ All assignments have been listed below with its related topics
 - Assignment 1 - React Class | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/React/hello-world)
 
 - Assignment 2 - Beer Bank | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/React/beer-bank)
+
+## Final Assignment
+
+-Travel Nepal | [Code](https://github.com/Coderushnepal/RiyaMaharjan/tree/main/final%20project)
