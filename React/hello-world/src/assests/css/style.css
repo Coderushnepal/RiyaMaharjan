@@ -1,0 +1,14 @@
+.dark {
+  background-color: black;
+  color: white;
+  width: 50%;
+  margin: 0px auto;
+  padding: 1rem;
+}
+.light {
+  background-color: white;
+  color: dark;
+  width: 50%;
+  margin: 0px auto;
+  padding: 1rem;
+}
