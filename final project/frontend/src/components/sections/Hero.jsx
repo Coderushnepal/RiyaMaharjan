@@ -15,12 +15,14 @@ export default function Hero() {
     `${today.getMonth() + 1}`.padStart(2, "0") +
     "-" +
     `${today.getDate() + 1}`.padStart(2, "0");
-  var minCheckOutDate = minCheckInDate;
+
 
   const [bookstartDate, setstartDate] = useState("");
   const [bookendDate, setendDate] = useState("");
   const [userId, setuserId] = useState("");
   const [bookdestinationId, setdestinationId] = useState("");
+
+  var minCheckOutDate = bookstartDate;
 
   const Token = localStorage.getItem("Token");
   const config = {
@@ -36,7 +38,6 @@ export default function Hero() {
   function addBooking(e) {
     e.preventDefault();
     const postBooking = {
-      // bookedBy: userId,
       startDate: bookstartDate,
       endDate: bookendDate,
       destinationId: bookdestinationId,
@@ -55,7 +56,6 @@ export default function Hero() {
       })
       .catch((err) => {
         const { response } = err;
-        // console.log(response.data);
         cogoToast.error(response.data.message);
       });
   }

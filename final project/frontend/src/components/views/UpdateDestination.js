@@ -29,9 +29,15 @@ function DestinationList() {
     destinationName: "",
     price: "",
     description: "",
-    images: [],
+    images: [""],
     id: "",
   });
+
+  const [image, setImage] = useState({
+    added: [],
+    removed: [],
+  });
+
   const { destinationName, price, description, images, id } = values;
 
   function jumpToHome(e) {
@@ -41,7 +47,7 @@ function DestinationList() {
   function fetchUser() {
     if (!profile || !profile?.isAdmin) {
       history.replace("/login");
-      cogoToast.warn("You are not authorized");
+      cogoToast.warn("You are not authorized-update");
     }
   }
 
@@ -52,6 +58,10 @@ function DestinationList() {
       destinationName: destinationName,
       price: price,
       description: description,
+      images: {
+        added: image.added,
+        removed: image.removed,
+      },
     };
     destinationData = cleanObj(destinationData);
 
@@ -63,7 +73,8 @@ function DestinationList() {
       },
     };
 
-    // console.log(destinationData);
+    console.log(destinationData);
+    console.log(images);
     axios
       .put(url, destinationData, config)
       .then((response) => {
@@ -82,18 +93,45 @@ function DestinationList() {
         cogoToast.error(response.data.message);
       });
   }
+  function addImage(index, value) {
+    let newImages = [...images];
+    newImages[index] = value;
+    setValues({ ...values, images: newImages });
+  }
 
   function handleChange(e) {
     setValues({ ...values, [e.target.name]: e.target.value });
+    console.log(values, e.target.name);
+  }
+
+  function addAddedImage(index, value) {
+    let newImages = [...image.added];
+    newImages[index] = value;
+    setImage({ ...image, added: newImages });
+  }
+
+  function deleteDest(index) {
+    setImage({ ...image, removed: [...image.removed, images[index]] });
+    let newImages = images.filter((item, i) => i != index);
+    setValues({ ...values, images: newImages });
   }
 
   useEffect(() => {
     dispatch(fetchDestinations);
   }, []);
 
+  function fetchUser() {
+    if (!profile?.isAdmin) {
+      history.replace("/login");
+      cogoToast.warn("You are not authorized");
+      console.log(profile);
+    }
+  }
   useEffect(() => {
-    fetchUser();
-  }, []);
+    if (profile?.name) {
+      fetchUser();
+    }
+  }, [profile]);
 
   return (
     <div className="recommend modify">
@@ -140,6 +178,51 @@ function DestinationList() {
                   name="description"
                 />
               </div>
+
+              <div>
+                <p>Images</p>
+                {images.map((image, index) => (
+                  <div key={index} className="image-container">
+                    <input
+                      type="url"
+                      className="mainLoginInput"
+                      placeholder={`Image ${index + 1}`}
+                      onChange={(e) => {
+                        addImage(index, e.target.value);
+                      }}
+                      value={image}
+                      name="images"
+                    />{" "}
+                    <button type="button" onClick={() => deleteDest(index)}>
+                      Delete
+                    </button>
+                  </div>
+                ))}
+                {image.added.map((item, index) => (
+                  <div key={index}>
+                    <input
+                      type="url"
+                      className="mainLoginInput"
+                      placeholder={`Image ${index + images.length + 1}`}
+                      onChange={(e) => {
+                        addAddedImage(index, e.target.value);
+                      }}
+                      value={item}
+                      name="images"
+                    />{" "}
+                  </div>
+                ))}
+                <button
+                  type="button"
+                  onClick={() => {
+                    // setValues({ ...values, images: [...values.images, ""] });
+                    setImage({ ...image, added: [...image.added, ""] });
+                  }}
+                >
+                  {" "}
+                  Add another Image
+                </button>
+              </div>
             </fieldset>
 
             <div>
@@ -157,7 +240,7 @@ function DestinationList() {
       ) : (
         <div className="destinations">
           {destinations.map((destination) => (
-            <div key={destination.id} className="destination">
+            <div key={destination.id} className="destination-card">
               <h3>{destination.destinationName}</h3>
               <img
                 src={destination.images[0]}

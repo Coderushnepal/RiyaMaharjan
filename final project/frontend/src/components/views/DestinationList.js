@@ -1,7 +1,7 @@
 //rfce
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import AddDestination from "../sections/AddDestination";
+import ALterDestination from "../sections/AlterDestination";
 import Footer from "../sections/Footer";
 import Hero from "../sections/Hero";
 import Home from "../sections/Home";
@@ -25,7 +25,7 @@ function LandingPage() {
   return (
     <>
       <div>
-        {profile?.isAdmin && <AddDestination />}
+        {profile?.isAdmin && <ALterDestination />}
         {profile?.isAdmin && <Bookings />}
         <Navbar />
         {/* <Home /> */}

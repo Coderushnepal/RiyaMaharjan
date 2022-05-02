@@ -67,7 +67,7 @@ function BookingList() {
   ) : (
     <>
       {history.replace("/login")}
-      {cogoToast.warn("You are not authorized")}
+      {cogoToast.warn("You are not authorized-booking")}
     </>
   );
 }

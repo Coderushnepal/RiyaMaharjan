@@ -15,6 +15,7 @@ function DestinationList() {
   const dispatch = useDispatch();
   const destinations = useSelector((store) => store.destination.destinations);
   const { profile, bookings, isLoading } = useSelector((state) => state.user);
+  const history = useHistory();
 
   useEffect(() => {
     dispatch(getProfile());
@@ -25,8 +26,6 @@ function DestinationList() {
     history.push("/");
   }
 
-  const history = useHistory();
-
   const [destinationName, setdestinationName] = useState("");
   const [price, setprice] = useState("");
   const [description, setdescription] = useState("");
@@ -35,7 +34,7 @@ function DestinationList() {
   function fetchUser() {
     if (!profile || !profile?.isAdmin) {
       history.replace("/login");
-      cogoToast.warn("You are not authorized");
+      cogoToast.warn("You are not authorized-modify");
     }
   }
 
@@ -194,14 +193,10 @@ function DestinationList() {
             <div key={destination.id} className="destination">
               <h3>{destination.destinationName}</h3>
               <img
+                className="modify-destination-img"
                 src={destination.images[0]}
                 alt={destination.destinationName}
               />
-              {/* <span>
-                <button>
-                  <Link to={`/updatedestination`}>Update</Link>
-                </button>{" "}
-              </span> */}
               <span>
                 <button
                   onClick={() => {
