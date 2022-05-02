@@ -17,3 +17,8 @@
   width: fit-content;
   margin: 10px auto 20px;
 }
+.modify-destination-img {
+  height: 250px;
+  overflow: hidden;
+ 
+}

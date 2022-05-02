@@ -33,7 +33,7 @@
 }
 .title h1 {
   font-size: 3rem;
-  letter-spacing: 0.2rem;
+  margin: 3px;
 }
 .title p {
   text-align: center;
