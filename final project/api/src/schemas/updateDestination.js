@@ -1,4 +1,4 @@
-import Joi from 'joi';
+import Joi from "joi";
 
 const schema = Joi.object({
   destinationName: Joi.string().optional(),

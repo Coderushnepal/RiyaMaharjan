@@ -12,7 +12,6 @@ import logger from "../utils/logger.js";
  * @return {Object}
  * */
 export async function getAllDestinations(query) {
-
   const priceFilter = query.price ? query.price.split(",").map(Number) : [];
   const destinationFilter = query.destinationName
     ? query.destinationName.split(",")
@@ -177,13 +176,16 @@ export async function updateDestination(id, params) {
 
   if (params.images?.added?.length) {
     params.images.added.forEach(async (url) => {
-      await new DestinationImage().save({ id, imageUrl: url });
+      await new DestinationImage().save({ destinationId: id, imageUrl: url });
     });
   }
 
   if (params.images?.removed?.length) {
     params.images.removed.forEach(async (url) => {
-      await new DestinationImage().removeByParams({ id, imageUrl: url });
+      await new DestinationImage().removeByParams({
+        destinationId: id,
+        imageUrl: url,
+      });
     });
   }
 
