@@ -3,6 +3,7 @@
 }
 .destinationcrud h1 {
   text-align: center;
+  word-spacing: 0.4rem;
 }
 .destinationcrud-list {
   display: flex;
