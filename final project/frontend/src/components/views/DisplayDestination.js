@@ -33,7 +33,7 @@ function DisplayDestination() {
 
   function fetchUser() {
     if (!profile?.isAdmin) {
-      history.replace("/login");
+      history.replace("/");
       cogoToast.warn("You are not authorized");
       console.log(profile);
     }

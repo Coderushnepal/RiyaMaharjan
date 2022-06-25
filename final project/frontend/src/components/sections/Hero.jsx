@@ -43,6 +43,7 @@ export default function Hero() {
       destinationId: bookdestinationId,
     };
 
+    console.log(postBooking)
     const url = `${configuration.apiUrl}${configuration.endpoints.bookings}`;
     axios
       .post(url, postBooking, config)

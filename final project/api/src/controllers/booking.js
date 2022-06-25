@@ -45,7 +45,7 @@ export function postBookings(req, res, next) {
         endDate: new Date(endDate),
         bookedBy: decoded.id,
       };
-      // console.log(reqData);
+      console.log(reqData);
       return bookingService
         .addBooking(reqData)
         .then((data) => res.json(data))
@@ -76,7 +76,7 @@ export function getuserbooking(req, res, next) {
     }
 
     var decoded = jwt.verify(token, process.env.TOKEN_SECRET);
-    
+
     if (decoded) {
       return bookingService
         .getUserBooking(decoded.id)

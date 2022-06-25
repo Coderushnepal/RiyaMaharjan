@@ -6,6 +6,7 @@ import axios from "axios";
 import { getProfile, getUserBooking } from "../../actions/user";
 import user from "../../assests/user.png";
 import { AiFillHome } from "react-icons/ai";
+import UserImage from "../sections/UserImage";
 
 function UserProfile() {
   const Token = localStorage.getItem("Token");
@@ -30,7 +31,7 @@ function UserProfile() {
           <img src={user} alt="user" className="user-profile-image" />
           <div className="space"></div>
           <p>
-            <b>{profile?.name}</b>{" "}
+            <b>{profile?.name}</b>
           </p>
           <div className="space"></div>
           <p>{profile?.email}</p>

@@ -32,7 +32,7 @@ function DeleteDestination() {
 
   function fetchUser() {
     if (!profile?.isAdmin) {
-      history.replace("/login");
+      history.replace("/");
       cogoToast.warn("You are not authorized");
       console.log(profile);
     }
@@ -92,10 +92,9 @@ function DeleteDestination() {
               {destinations.map((destination, index) => (
                 <tr key={index}>
                   <td>{index + 1}</td>
-                  
 
                   <td>{destination.destinationName}</td>
-                
+
                   <td>
                     {" "}
                     <button

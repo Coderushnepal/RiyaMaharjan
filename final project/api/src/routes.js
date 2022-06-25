@@ -53,12 +53,14 @@ router.get(
 router.post(
   "/destinations",
   validateBody(addDestinationSchema),
+  authenticate,
   destinationController.saveDestination
 );
 
 // put
 router.put(
   "/destinations/:destinationIdentifier",
+  authenticate,
   validateBody(updateDestinationSchema),
   destinationController.updateDestination
 );
@@ -75,8 +77,8 @@ router.get("/profile", userController.getUser);
 
 router.post("/login", validateBody(loginSchema), userController.login);
 
-router.get("/userbooking", bookingController.getuserbooking);
-router.get("/bookings", bookingController.getallBookings);
+router.get("/userbooking", authenticate, bookingController.getuserbooking);
+router.get("/bookings", authenticate, bookingController.getallBookings);
 router.post(
   "/bookings",
   validateBody(addBookingQuerySchema),

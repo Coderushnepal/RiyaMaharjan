@@ -1,6 +1,6 @@
 .swiper {
   border: 1px solid #c5c8c9;
-  background-color: rgb(182, 182, 182);
+  background-color: rgba(209, 209, 209, 0.95);
   border-radius: 10px;
 }
 .swiper-image img {

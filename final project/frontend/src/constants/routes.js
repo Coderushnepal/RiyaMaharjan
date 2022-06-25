@@ -1,6 +1,7 @@
 export const DESTINATIONS = "/destinations";
 export const ALTERDESTINATIONS = "/alterdestinations";
 export const DESTINATION = "/destinations/:id";
+// export const DESTINATION = "/destinations/:id/:destinationName";
 export const LOGIN = "/login";
 export const REGISTER = "/register";
 export const BOOKINGS = "/bookings";
@@ -9,4 +10,4 @@ export const USERPROFILE = "/userprofile";
 export const DESTINATIONCRUD = "/destinationcrud";
 export const ADDDESTINATION = "/adddestinations";
 export const DELETEDESTIANTION = "/deletedestinations";
-export const DISPLAYDESTINATION="/displaydestinations"
+export const DISPLAYDESTINATION = "/displaydestinations";

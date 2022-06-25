@@ -46,7 +46,7 @@ function DestinationList() {
 
   function fetchUser() {
     if (!profile || !profile?.isAdmin) {
-      history.replace("/login");
+      history.replace("/");
       cogoToast.warn("You are not authorized-update");
     }
   }
@@ -73,8 +73,8 @@ function DestinationList() {
       },
     };
 
-    console.log(destinationData);
-    console.log(images);
+    // console.log(destinationData);
+    // console.log(images);
     axios
       .put(url, destinationData, config)
       .then((response) => {

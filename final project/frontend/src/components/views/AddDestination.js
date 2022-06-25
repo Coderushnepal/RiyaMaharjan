@@ -16,7 +16,7 @@ function AddDestinations() {
   const destinations = useSelector((store) => store.destination.destinations);
   const { profile, bookings, isLoading } = useSelector((state) => state.user);
   const history = useHistory();
-  console.log(profile);
+  // console.log(profile);
 
   useEffect(() => {
     dispatch(getProfile());
@@ -34,9 +34,9 @@ function AddDestinations() {
 
   function fetchUser() {
     if (!profile?.isAdmin) {
-      history.replace("/login");
+      history.replace("/");
       cogoToast.warn("You are not authorized");
-      console.log(profile);
+      // console.log(profile);
     }
   }
 
@@ -48,6 +48,7 @@ function AddDestinations() {
       description: description,
       images: images,
     };
+    // console.log(destinationData);
     const url = `${config.apiUrl}${config.endpoints.destinations}`;
     axios
       .post(url, destinationData)
